@@ -2,11 +2,11 @@ import React from 'react'
 
 const Main03 = () => {
   return (
-    <section className='h-dvh flex justify-center items-start flex-col' style={{backgroundColor:'#ffec40'}}>
-        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)'}}>
-          <div className='leading-none'>
+    <section className='h-dvh' style={{backgroundColor:'#fff', paddingBottom:'300px'}}>
+        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
+          <div className='leading-none' style={{paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
-              <h2 style={{fontSize:'13.542vw', fontWeight:500}}>Thank you 
+              <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block'}}>Thank you 
                 <br/>for being alive</h2> 
               {/* <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'18.750vw', fontWeight: 700, color:'#86bee7'}}>Lovely Runner</span> */}
             </div>
