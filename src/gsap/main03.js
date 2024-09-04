@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Main03 = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const triggerRef = useRef(null);
+
+  // useEffect(() => {
+  //   const sections = gsap.utils.toArray('.part');
+
+  //   // Set up the horizontal scroll
+  //   gsap.to(sections, {
+  //     xPercent: -100 * (sections.length - 1),
+  //     ease: 'none',
+  //     scrollTrigger: {
+  //       trigger: triggerRef.current,
+  //       pin: true,
+  //       scrub: 1,
+  //       snap: 1 / (sections.length - 1),
+  //       end: () => `+=${(triggerRef.current).offsetWidth}`,
+  //     },
+  //   });
+  // }, []);
+  
   return (
-    <section className='h-dvh' style={{backgroundColor:'#fff', paddingBottom:'300px'}}>
-        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px'}}>
+        <div className='tags h-dvh w-dvw' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
               <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block'}}>Thank you 
                 <br/>for being alive</h2> 
-              {/* <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'18.750vw', fontWeight: 700, color:'#86bee7'}}>Lovely Runner</span> */}
             </div>
             <div className='tags-wrap' style={{position:'absolute',top:'50%',left:'50%',width:'100%',height:'100%',maxWidth:'1920px',margin:'0 auto',transform:'translate(-50%,-50%)'}}>
               <span style={{opacity:1, visibility:'inherit', transform:'rotate(7.00001deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'3%',left:'7%'}}>Eclipse</span>
@@ -35,72 +56,72 @@ const Main03 = () => {
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
               <span style={{color:'#0cd886',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART1</span>
             </div>
-            <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto', paddingLeft:'3.646vw',paddingRight:'3.646vw'}}>
-              <div className='ost_title' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>
-                <span>Rain Shower</span>
+            <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
+              <div className='ost_title'>
+                <span style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Rain Shower</span>
               </div>
-              <div className='ost_singer' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>
-                <span>Eclipse</span>
+              <div className='ost_singer'>
+                <span style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Eclipse</span>
               </div>
             </div>
           </div>
-          <div className='part2 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', paddingLeft:'3.646vw',paddingRight:'3.646vw'}}>
+          <div className='part2 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px'}}>
             <div className='img_wrap'>
             </div>
-            <div className='ost_part m-0'>
-              <span style={{color:'#86bee7',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700}}>PART2</span>
+            <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
+              <span style={{color:'#86bee7',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART2</span>
             </div>
             <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
-              <div className='ost_title' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>
-                <span>Star</span>
+              <div className='ost_title'>
+                <span style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Star</span>
               </div>
-              <div className='ost_singer' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>
-                <span>N.Flying</span>
+              <div className='ost_singer'>
+                <span style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>N.Flying</span>
               </div>
             </div>
           </div>
-          <div className='part3'>
+          <div className='part3 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px'}}>
             <div className='img_wrap'>
             </div>
-            <div className='ost_part' style={{color:'#ff89a2',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif"}}>
-              <span>PART3</span>
+            <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
+              <span style={{color:'#ff89a2',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART3</span>
             </div>
-            <div className='ost_info'>
+            <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
               <div className='ost_title'>
-                <span>It's like a dream</span>
+                <span style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>It's like a dream</span>
               </div>
               <div className='ost_singer'>
-                <span>Minnie (G)I-DLE</span>
+                <span style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Minnie (G)I-DLE</span>
               </div>
             </div>
           </div>
-          <div className='part4'>
+          <div className='part4 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px'}}>
             <div className='img_wrap'>
             </div>
-            <div className='ost_part' style={{color:'#b296ff',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif"}}>
-              <span>PART8</span>
+            <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
+              <span style={{color:'#b296ff',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART8</span>
             </div>
-            <div className='ost_info'>
+            <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
               <div className='ost_title'>
-                <span>Spring Snow</span>
+                <span style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Spring Snow</span>
               </div>
               <div className='ost_singer'>
-                <span>10CM</span>
+                <span style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>10CM</span>
               </div>
             </div>
           </div>
-          <div className='part5'>
+          <div className='part5 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px'}}>
             <div className='img_wrap'>
             </div>
-            <div className='ost_part' style={{color:'#ffeb35',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif"}}>
-              <span>PART9</span>
+            <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
+              <span style={{color:'#ffeb35',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART9</span>
             </div>
-            <div className='ost_info'>
+            <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
               <div className='ost_title'>
-                <span>Present</span>
+                <span style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Present</span>
               </div>
               <div className='ost_singer'>
-                <span>Ha Sung Woon</span>
+                <span style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Ha Sung Woon</span>
               </div>
             </div>
           </div>
