@@ -31,6 +31,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100vh',
+    width: '1920px',
     backgroundColor: 'skyblue',
   },
   percentage: {

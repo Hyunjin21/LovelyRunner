@@ -24,8 +24,8 @@ const Main03 = () => {
   // }, []);
   
   return (
-    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px'}}>
-        <div className='tags h-dvh w-dvw' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', width:'1920px'}}>
+        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
               <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block'}}>Thank you 

@@ -18,17 +18,47 @@ const Main06 = () => {
         // markers: true
       }
     })
-    .fromTo(textRef.current, {x:'100%'}, {x:'-50%', ease:'none', duration:5},0)
+    .fromTo(textRef.current, 
+      { 
+        x:'100%', 
+        // textShadow: '-30px -30px 30px rgba(0, 0, 0, 0.5)' 
+      }, {
+        x:'-20%',
+        // textShadow: '30px 30px 30px rgba(0, 0, 0, 0.5)', 
+        ease:'none', 
+        duration:10
+      },0)
+    // .to(textRef.current, {
+    //   textShadow: "10px 10px 15px rgba(0, 0, 0, 0.3)",
+    //   duration: 0.1
+    // }, 0)
+    // .to(textRef.current, {
+    //   textShadow: "20px 20px 30px rgba(0, 0, 0, 0.3)",
+    //   duration: 0.1,
+    //   scrollTrigger: {
+    //     trigger: triggerRef.current,
+    //     start: '0% 100%',
+    //     end: '0% 20%',
+    //     scrub: 1,
+    //   }
+    // }, 0);
   },[]);
 
   
 
   return (
-    <section ref={triggerRef} className='scroll-title h-dvh w-dvw flex justify-center items-start' style={{backgroundColor:'#fff'}}>
-        <div ref={titleRef} className='uppercase leading-none'>
-          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'18.750vw', fontWeight: 700, color:'#86bee7'}}>Lovely Runner</span>
+    <section className='pen' style={{maxWidth:'1920px', width:'1920px', maxHeight:'850px', height:'850px', margin:0, padding:0,position:'relative'}}>
+      <div className='scroll-item'>
+        <div className='img-wrap' style={{width:'67.708vw',height:'44.271vw', margin:'0 auto'}}>
+          <img src='pen.png'/>
         </div>
-    </section>    
+      </div>
+      <div ref={triggerRef} className='scroll-title h-dvh w-dvw flex justify-center items-center' style={{backgroundColor:'#fff',position:'absolute',top:'50%',zIndex:-1,marginTop:'8vw',transform:'translateY(-50%)'}}>
+        <div ref={titleRef} className='uppercase leading-none'>
+          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.8333vw', fontWeight: 700, color:'#86bee7',letterSpacing:'-0.625vw'}}>Lovely Runner</span>
+        </div>
+      </div>    
+    </section>
   )
 }
 

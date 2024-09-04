@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main01 = () => {
   return (
-    <section className='h-dvh w-dvw flex justify-center items-center' style={{backgroundColor:'#ffec40'}}>
+    <section className='h-dvh w-dvw flex justify-center items-center' style={{backgroundColor:'#ffec40', width:'1920px'}}>
       <img src='main.png'></img>
     </section>     
   )
