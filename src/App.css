@@ -54,6 +54,29 @@ html {
     transform: rotate(360deg);
   }
 }
+.hidden { display: none;}
+
+.scrolled-title::before {
+  background: linear-gradient(#86bee7 20%, transparent);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  /* transition: background 0.3s ease, top 0.3s ease-in-out; */
+}
+.tags-wrap span {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tags-wrap span:hover {
+  opacity: 0; /* Make it disappear */
+  transform: scale(1.2); /* Increase size slightly */
+}
+
+
 .to::after {
   content: '';
   display: inline-block;
