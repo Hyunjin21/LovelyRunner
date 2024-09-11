@@ -32,7 +32,7 @@ const Main02fixed = () => {
         start: '0% 100%',
         end: '0% 5%', 
         scrub: true,
-        markers: true
+        // markers: true
       },
       immediateRender: false,
       position: 'fixed',

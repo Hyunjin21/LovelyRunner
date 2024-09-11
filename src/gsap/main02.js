@@ -17,7 +17,7 @@ const Main02 = () => {
         start: '0% 100%',
         end: '0% 20%',
         scrub: 1,
-        markers: true
+        // markers: true
       }
     })
     .fromTo(textRef.current, { x: '100%'}, { x: '0%', ease: 'none', duration: 10 }, 0)
@@ -28,7 +28,7 @@ const Main02 = () => {
         start: '0% 20%',
         end: '0% 10%',
         scrub: 1,
-        markers: true
+        // markers: true
       }
     })
     .fromTo(textRef.current, { color:'#86bee7' }, { color:'#ffec40' }, 100)
