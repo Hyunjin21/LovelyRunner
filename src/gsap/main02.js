@@ -17,43 +17,23 @@ const Main02 = () => {
         start: '0% 100%',
         end: '0% 20%',
         scrub: 1,
-        // markers: true
+        markers: true
       }
     })
-    .fromTo(textRef.current, { x: '100%' }, { x: '0%', ease: 'none', duration: 10 }, 0);
-
-    // // 두 번째 애니메이션: 텍스트 크기 감소 및 색상 변경
-    // gsap.to(textRef.current, {
-    //   color: '#ffec40',
-    //   scrollTrigger: {
-    //     trigger: triggerRef.current,
-    //     start: '0% 10%', // 텍스트 애니메이션이 끝난 시점
-    //     end: '0% 5%', // 스크롤이 끝나는 시점
-    //     scrub: true,
-    //     // markers: true,
-    //   },
-    //   fontSize: '24px',
-    //   immediateRender: false, // 바로 변경되도록 설정
-    //   ease: 'ease-in',
-    // });
-
-    // // 세 번째 애니메이션: triggerRef의 높이 조정 및 배경색 변경
-    // gsap.to(triggerRef.current, {
-    //   height: 'auto', // 높이를 titleRef 높이에 맞춤
-    //   background: 'linear-gradient(#86bee7 20%, transparent)',
-    //   scrollTrigger: {
-    //     trigger: triggerRef.current,
-    //     start: '0% 10%',
-    //     end: '0% 10%', // 스크롤이 끝나는 시점
-    //     scrub: true,
-    //     markers: true,
-    //   },
-    //   position: 'fixed',
-    //   top: '24px',
-    //   ease: 'none',
-    // });
-
+    .fromTo(textRef.current, { x: '100%'}, { x: '0%', ease: 'none', duration: 10 }, 0)
+    
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        start: '0% 20%',
+        end: '0% 10%',
+        scrub: 1,
+        markers: true
+      }
+    })
+    .fromTo(textRef.current, { color:'#86bee7' }, { color:'#ffec40' }, 100)
   }, []);
+  
 
   return (
     <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#ffec40', width: '1920px', height: '100vh', position: 'relative' }}>

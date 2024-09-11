@@ -18,7 +18,8 @@ const Main02fixed = () => {
         start: '0% 100%', 
         end: '0% 5%', 
         scrub: true,
-        markers: true,
+        // markers: true,
+        smooth: 1
     },
     fontSize: '24px',
     ease: 'ease-in',
@@ -31,13 +32,13 @@ const Main02fixed = () => {
         start: '0% 100%',
         end: '0% 5%', 
         scrub: true,
-        markers: true,
+        markers: true
       },
       immediateRender: false,
       position: 'fixed',
       top: '24px',
       zIndex:'99',
-      ease: 'none',
+      ease: 'none'
     });
 
   }, []);
