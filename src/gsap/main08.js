@@ -31,7 +31,7 @@ const Main08 = () => {
         start : '0% center',
         end : '30% center',
         scrub : 1,      
-        markers: true
+        // markers: true
       }
     })
     .to(text01Ref.current, {y:'-1200px', duration: 1, ease:'none'},0.5)

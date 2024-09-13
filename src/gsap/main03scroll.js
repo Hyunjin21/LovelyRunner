@@ -1,77 +1,70 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Scroll } from '@react-three/drei';
 
 const Main03scroll = () => {
   gsap.registerPlugin(ScrollTrigger);
   const triggerRef = useRef(null);
-  const scrollRef = useRef([]);
+  const scrollRef = useRef(null);
 
-//     const horizontal = document.querySelector(".scroll-part");
-// const sections = gsap.utils.toArray(".scroll-part > .part");
+  let sections = gsap.utils.toArray(".part");
 
-// gsap.to(sections, {
-//     xPercent: -100 * (sections.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: horizontal,
-//         start: "top top",
-//         end: () =>  "+=" + ('horizontal.offsetWidth - innerWidth'),
-//         pin: true,
-//         scrub: 1,
-//         snap: {
-//             snapTo: 1 / (sections.length - 1),
-//             inertia: false,
-//             duration: {min: 0.1, max: 0.1}
-//         },
-//         invalidateOnRefresh: true,
-//         anticipatePin: 1
-//     }
-// });
-    // gsap.registerPlugin(ScrollTrigger);
-
-
-    useEffect(() => {
-  let parts = gsap.utils.toArray(".part");
-  let scrollTween = gsap.to(parts, {
-    xPercent: -100 * (parts.length - 1),
-    ease:'none',
-    scrollTrigger : {
-      trigger:scrollRef.current,
-      pin: true,
-      scrub:1,
-      start:'30% center',
-      end:'33%',
-      markers:true
-    }
-  });
-
-  scrollRef.current.forEach(parts => {
-    gsap.timeline({
-      scrollTrigger : {
-        trigger: parts,
-        containerAnimation: scrollTween,
-        start : 'bottom right',
-        end : 'center center',
-        pin:1,
-        scrub: 1,
-        // markers: true,
+  gsap.to(sections, {
+      xPercent: -100 * (sections.length -1),
+      ease: "none",
+      scrollTrigger: {
+          trigger: scrollRef.current,
+          pin: true,
+          scrub: 1,
+          // snap: 1 / (sections.length -1),
+          end: "+=9600"
+          // end: document.querySelector("#parallax__cont").offsetWidth
       }
-    })
+  })
 
-    gsap.timeline({
-      scrollTrigger : {
-        trigger: parts,
-        containerAnimation: scrollTween,
-        start : 'center center',
-        end : 'center left',
-        pin:1,
-        scrub: 1,
-        markers: true,
-      }
-    })
-  });
-//   gsap.to(parts, {
+  // useEffect(() => {
+  //   const sections = gsap.utils.toArray(".part"); // 모든 .part 요소를 배열로 변환
+
+  //   gsap.to(sections, {
+  //     xPercent: -100 * (sections.length - 1), // 가로로 스크롤할 총 길이
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: scrollRef.current, 
+  //       pin: true,
+  //       // pinSpacing: false, 
+  //       scrub: 1, 
+  //       // snap: 1 / (sections.length - 1),
+  //       end: "+=" + scrollRef.current.offsetWidth // 스크롤 종료 위치를 .scroll-part의 너비로 설정
+  //       // end: () => "+=" + scrollRef.current.scrollWidth // 스크롤 종료 위치 설정
+  //     }
+  //   });
+  // }, []);
+
+  // const part = document.querySelector('.part1');
+  // const parts = gsap.utils.toArray(".part");
+  // const tops = parts.map(part => ScrollTrigger.create({trigger:part, start:'top top'}));
+  // parts.forEach((part,i)=>{
+  //   ScrollTrigger.create({
+  //     trigger:part,
+  //     start:()=>part.offsetHeight < window.innerHeight ? 'top top' : 'bottom bottom',
+  //     pin:true,
+  //     pinSpacing:false
+  //   });
+  // });
+
+  // ScrollTrigger.create({
+  //   snap:{
+  //     snapTo: (progress, self) =>{
+  //       let partStart = tops.map(st => st.start),
+  //       snapScroll = gsap.utils.snap(partStart, self.scroll());
+  //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+  //     },
+  //     duration: 0.5
+  //   }
+  // })
+//   let parts = gsap.utils.toArray('.part');
+//     gsap.to(parts, {
 //     xPercent: -100 * (parts.length - 1),
 //     ease: "none",
 //     scrollTrigger: {
@@ -80,29 +73,70 @@ const Main03scroll = () => {
 //       // pinSpacing: false,
 //       scrub: 1,
 //       markers: true,
-//       snap: 1 / (parts.length - 1),
-//       // end: '+=9600',
+//       // snap: 1 / (parts.length - 1),
+//       end: '+=9600',
 //       start: 'top top',
-//       end: () => "+=" + document.querySelector(".scroll-part").offsetWidth,
-//       onUpdate: (self) => console.log("progress:", self.progress),
-//   onEnter: () => console.log("entered"),
-//   onLeave: () => console.log("left")
+//       // end: () => "+=" + document.querySelector(".scroll-part").offsetWidth,
+//       // onUpdate: (self) => console.log("progress:", self.progress),
+//   // onEnter: () => console.log("entered"),
+//   // onLeave: () => console.log("left")
 //   }
 
 // });
-return () => {
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-};
+
+//     useEffect(() => {
+//     let parts = gsap.utils.toArray(".part");
+//     let scrollTween = gsap.to(parts, {
+//     xPercent: -100 * (parts.length - 1),
+//     ease:'none',
+//     scrollTrigger : {
+//       trigger:scrollRef.current,
+//       pin: true,
+//       scrub:1,
+//       start:'35% center',
+//       end:'40% center',
+//       markers:true
+//     }
+//   });
+
+//   scrollRef.current.forEach(parts => {
+//     gsap.timeline({
+//       scrollTrigger : {
+//         trigger: parts,
+//         containerAnimation: scrollTween,
+//         start : 'bottom right',
+//         end : 'center center',
+//         pin:1,
+//         scrub: 0.1,
+//         // markers: true,
+//       }
+//     })
+
+//     gsap.timeline({
+//       scrollTrigger : {
+//         trigger: parts,
+//         containerAnimation: scrollTween,
+//         start : 'center center',
+//         end : 'center left',
+//         pin:1,
+//         scrub: 1,
+//         // markers: true,
+//       }
+//     })
+//   });
+// return () => {
+//   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+// };
   
 
-  }, []);
+//   }, []);
 
   
   
   return (
-    <section ref={triggerRef} style={{backgroundColor:'#fff', overflow:'hidden', height:'100%'}}>
-        <div className='scroll-part' style={{background:'#fff', flexWrap:'nowrap',height:'100vh',display:'flex', overscrollBehavior:'none'}}>
-          <section className='part part1 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', overflow:'hidden', width:'1920px', height:'100vh', paddingBottom:'300px !important'}}>
+        <div ref={scrollRef} className='scroll-part' style={{background:'#fff', flexWrap:'nowrap',height:'100vh',display:'flex',position:'relative', width:'max-content'}}>
+          <section className='part part1 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -117,7 +151,7 @@ return () => {
               </div>
             </div>
           </section>
-          <section className='part part2 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
+          <section className='part part2 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -132,7 +166,7 @@ return () => {
               </div>
             </div>
           </section>
-          <section className='part part3 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
+          <section className='part part3 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -147,7 +181,7 @@ return () => {
               </div>
             </div>
           </section>
-          <section className='part part4 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
+          <section className='part part4 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -162,7 +196,7 @@ return () => {
               </div>
             </div>
           </section>
-          <section className='part part5 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
+          <section className='part part5 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -178,7 +212,11 @@ return () => {
             </div>
           </section>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     </section>   
+    
   );
 }
 
