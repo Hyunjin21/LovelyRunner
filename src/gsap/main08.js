@@ -28,16 +28,16 @@ const Main08 = () => {
 
     gsap.timeline({
       scrollTrigger : {
-        trigger : titleRef.current,
-        start : 'top center',
-        end : 'center center',
+        trigger : triggerRef.current,
+        start : '0% center',
+        end : '30% center',
         scrub : 1,      
         markers: true
       }
     })
-    .to(text01Ref.current, {y:'-500px', duration: 1, ease:'none'},0.5)
-    .to(text02Ref.current, {y:'-500px', duration: 1, ease:'none'},1.0)
-    .to(text03Ref.current, {y:'-500px', duration: 1, ease:'none'},1.5)
+    .to(text01Ref.current, {y:'-1200px', duration: 1, ease:'none'},0.5)
+    .to(text02Ref.current, {y:'-1200px', duration: 1, ease:'none'},1.0)
+    .to(text03Ref.current, {y:'-1200px', duration: 1, ease:'none'},1.5)
   }, []);
 
   return (
@@ -48,7 +48,7 @@ const Main08 = () => {
       <div style={{position:'relative', height:'100%', paddingLeft:'5.208vw', paddingRight:'5.208vw', maxWidth:'1920px', boxSizing:'border-box'}}>
         <ul ref={listRef} style={{marginTop:'-9.375vw', listStyle:'none'}}>
           <li ref={text01Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#ffec40', position:'absolute', top:'70%', left:'5.208vw'}}>TVING</li>
-          <li ref={text02Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#86bee7', position:'absolute', top:'70%', left:'50%', transform:'translate(-70%,-50%)'}}>SERIESON</li>
+          <li ref={text02Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#86bee7', position:'absolute', top:'70%', left:'50%', transform:'translateX(-50%)'}}>SERIESON</li>
           <li ref={text03Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#0cd886', position:'absolute', top:'70%', right:'5.208vw'}}>NETFLEX</li>
         </ul>
       </div>
