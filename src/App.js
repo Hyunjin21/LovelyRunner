@@ -5,6 +5,7 @@ import Main01 from './gsap/main01';
 import Main02 from './gsap/main02';
 import Main02fixed from './gsap/main02fixed';
 import Main03 from './gsap/main03';
+import Main03scroll from './gsap/main03scroll';
 import Main04 from './gsap/main04';
 import Main05 from './gsap/main05';
 import Main06 from './gsap/main06';
@@ -21,6 +22,7 @@ function App() {
       <Main02 />
       <Main02fixed />
       <Main03 />
+      <Main03scroll />
       <Main04 />
       <Main05 />
       <Main06 />

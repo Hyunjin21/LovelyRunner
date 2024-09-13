@@ -13,14 +13,13 @@ const Main08 = () => {
   const text03Ref = useRef(null);
 
   useEffect(() => {
-    // 텍스트 x축 이동
     gsap.timeline({
       scrollTrigger: {
         trigger: triggerRef.current,
         start: '0% 100%',
         end: '0% 20%',
         scrub: 1,
-        // pin: true,
+        pin: true,
         // markers: true
       }
     })
