@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Main03 = () => {
   gsap.registerPlugin(ScrollTrigger);
   const triggerRef = useRef(null);
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef([]);
 
   useEffect(() => {
     const tags = document.querySelectorAll('.tag');
@@ -21,74 +21,95 @@ const Main03 = () => {
       });
     });
 
+//     const horizontal = document.querySelector(".scroll-part");
+// const sections = gsap.utils.toArray(".scroll-part > .part");
+
+// gsap.to(sections, {
+//     xPercent: -100 * (sections.length - 1),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: horizontal,
+//         start: "top top",
+//         end: () =>  "+=" + ('horizontal.offsetWidth - innerWidth'),
+//         pin: true,
+//         scrub: 1,
+//         snap: {
+//             snapTo: 1 / (sections.length - 1),
+//             inertia: false,
+//             duration: {min: 0.1, max: 0.1}
+//         },
+//         invalidateOnRefresh: true,
+//         anticipatePin: 1
+//     }
+// });
     // gsap.registerPlugin(ScrollTrigger);
 
-//   let parts = gsap.utils.toArray(".part");
 
+  // let parts = gsap.utils.toArray(".part");
+  // let scrollTween = gsap.to(parts, {
+  //   xPercent: -100 * (parts.length - 1),
+  //   ease:'none',
+  //   scrollTrigger : {
+  //     trigger:scrollRef.current,
+  //     pin:true,
+  //     scrub:1,
+  //     start:'center center',
+  //     end:'50%',
+  //     markers:true
+  //   }
+  // });
+
+  // scrollRef.current.forEach(parts => {
+  //   gsap.timeline({
+  //     scrollTrigger : {
+  //       trigger: parts,
+  //       containerAnimation: scrollTween,
+  //       start : 'center right',
+  //       end : 'center center',
+  //       scrub: true,
+  //       // markers: true,
+  //     }
+  //   })
+
+  //   gsap.timeline({
+  //     scrollTrigger : {
+  //       trigger: parts,
+  //       containerAnimation: scrollTween,
+  //       start : 'center center',
+  //       end : 'center left',
+  //       scrub: true,
+  //       markers: true,
+  //     }
+  //   })
+  // });
 //   gsap.to(parts, {
 //     xPercent: -100 * (parts.length - 1),
 //     ease: "none",
 //     scrollTrigger: {
 //       trigger: ".scroll-part",
 //       pin: true,
+//       // pinSpacing: false,
 //       scrub: 1,
+//       markers: true,
 //       snap: 1 / (parts.length - 1),
-//       end: () => "+=" + document.querySelector(".scroll-part").offsetWidth
+//       // end: '+=9600',
+//       start: 'top top',
+//       end: () => "+=" + document.querySelector(".scroll-part").offsetWidth,
+//       onUpdate: (self) => console.log("progress:", self.progress),
+//   onEnter: () => console.log("entered"),
+//   onLeave: () => console.log("left")
 //   }
+
 // });
 
-  ScrollTrigger.matchMedia({
-    '(min-width:1024px)':function(){
-      let sections = gsap.utils.toArray(".part");
-      // let sections = gsap.utils.toArray(".panel");
-      let scrollTween = gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: scrollRef.current,
-          pin:true,
-          scrub:1,
-          // start:'top center',
-          // end:'300%',
-          // markers:true
-        }
-      });
-
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".container",
-          pin: true,
-          scrub: 1,
-          start: 'top 20%',
-          snap: 1 / (sections.length - 1),
-          end: () => "+=" + document.querySelector(".container").offsetWidth,
-          markers: true,
-        }
-      });
-      gsap.to(sections, {
-        xPercent: 100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".container",
-          pin: true,
-          scrub: 1,
-          start: 'top 20%',
-          snap: 1 / (sections.length - 1),
-          end: () => "-=" + document.querySelector(".container").offsetWidth,
-          // markers: true,
-        }
-      });
-        }
-      });
+  
 
     // Clean up event listeners on component unmount
     return () => {
       tags.forEach(tag => {
         tag.removeEventListener('mouseenter', () => {});
       });
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
 
 
@@ -97,7 +118,7 @@ const Main03 = () => {
   
   
   return (
-    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', width:'100vw', overflowX:'hidden', overflowY:'scroll', height:'100%', position:'relative', WebkitOverflowScrolling:'touch'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', overflow:'hidden', height:'100%'}}>
         <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
@@ -122,8 +143,8 @@ const Main03 = () => {
             </div>
           </div>
         </div>
-        <div ref={scrollRef} className='container scroll-part flex items-start flex-row' style={{background:'#fff', flexWrap:'nowrap', width:'max-content', height:'100vh',width:'500vw'}}>
-          <section className='part part1 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', height:'100vh'}}>
+        {/* <div className='container scroll-part' style={{background:'#ff00ff', flexWrap:'nowrap',height:'100vh',display:'flex', overscrollBehavior:'none'}}>
+          <section className='part part1 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -138,7 +159,7 @@ const Main03 = () => {
               </div>
             </div>
           </section>
-          <section className='part part2 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', height:'100vh'}}>
+          <section className='part part2 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -153,7 +174,7 @@ const Main03 = () => {
               </div>
             </div>
           </section>
-          <section className='part part3 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', height:'100vh'}}>
+          <section className='part part3 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -168,7 +189,7 @@ const Main03 = () => {
               </div>
             </div>
           </section>
-          <section className='part part4 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', height:'100vh'}}>
+          <section className='part part4 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -183,7 +204,7 @@ const Main03 = () => {
               </div>
             </div>
           </section>
-          <section className='part part5 flex justify-center items-center flex-col h-dvh w-full' style={{width:'1920px', height:'100vh'}}>
+          <section className='part part5 flex justify-center items-center flex-col' style={{ width:'100vw', height:'100%', position:'relative'}}>
             <div className='img_wrap'>
             </div>
             <div className='ost_part flex justify-center items-center m-0' style={{width:'1920px'}}>
@@ -198,7 +219,7 @@ const Main03 = () => {
               </div>
             </div>
           </section>
-        </div>
+        </div> */}
     </section>   
   );
 }

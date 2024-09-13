@@ -20,22 +20,35 @@ const Main08 = () => {
         start: '0% 100%',
         end: '0% 20%',
         scrub: 1,
+        // pin: true,
         // markers: true
       }
     })
     .fromTo(textRef.current, { x: '100%' }, { x: '0%', ease: 'none', duration: 10 }, 0);
 
+    gsap.timeline({
+      scrollTrigger : {
+        trigger : titleRef.current,
+        start : 'top center',
+        end : 'center center',
+        scrub : 1,      
+        markers: true
+      }
+    })
+    .to(text01Ref.current, {y:'-800px', duration: 1, ease:'none'},0.3)
+    .to(text02Ref.current, {y:'-800px', duration: 1, ease:'none'},0.6)
+    .to(text03Ref.current, {y:'-800px', duration: 1, ease:'none'},0.9)
   }, []);
 
   return (
     <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#fff', width: '1920px', height: '100vh', position: 'relative' }}>
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
-        <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '400px', fontWeight: 700, color: '#000' }}>Film Distributor</span>
+        <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '20.833vw', fontWeight: 700, color: '#000' }}>Film Distributor</span>
       </div>
-      <div ref={subtitleRef}>
-        <span ref={text01Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '260px', fontWeight: 500, color: '#ffec40' }}>TVING</span>
-        <span ref={text01Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '260px', fontWeight: 500, color: '#86bee7' }}>SERIESON</span>
-        <span ref={text01Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '260px', fontWeight: 500, color: '#0cd886' }}>NETFLEX</span>
+      <div ref={subtitleRef} className='flex flex-row'>
+        <span ref={text01Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#ffec40' }}>TVING</span>
+        <span ref={text02Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#86bee7' }}>SERIESON</span>
+        <span ref={text03Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#0cd886' }}>NETFLEX</span>
       </div>
     </section>
   );
