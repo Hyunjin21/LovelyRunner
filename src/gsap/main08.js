@@ -7,7 +7,7 @@ const Main08 = () => {
   const triggerRef = useRef(null);
   const titleRef = useRef(null);
   const textRef = useRef(null);
-  const subtitleRef = useRef(null);
+  const listRef = useRef(null);
   const text01Ref = useRef(null);
   const text02Ref = useRef(null);
   const text03Ref = useRef(null);
@@ -35,9 +35,9 @@ const Main08 = () => {
         markers: true
       }
     })
-    .to(text01Ref.current, {y:'-800px', duration: 1, ease:'none'},0.3)
-    .to(text02Ref.current, {y:'-800px', duration: 1, ease:'none'},0.6)
-    .to(text03Ref.current, {y:'-800px', duration: 1, ease:'none'},0.9)
+    .to(text01Ref.current, {y:'-500px', duration: 1, ease:'none'},0.5)
+    .to(text02Ref.current, {y:'-500px', duration: 1, ease:'none'},1.0)
+    .to(text03Ref.current, {y:'-500px', duration: 1, ease:'none'},1.5)
   }, []);
 
   return (
@@ -45,10 +45,12 @@ const Main08 = () => {
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
         <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '20.833vw', fontWeight: 700, color: '#000' }}>Film Distributor</span>
       </div>
-      <div ref={subtitleRef} className='flex flex-row'>
-        <span ref={text01Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#ffec40' }}>TVING</span>
-        <span ref={text02Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#86bee7' }}>SERIESON</span>
-        <span ref={text03Ref} className='w-max whitespace-nowrap block flex flex-start' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#0cd886' }}>NETFLEX</span>
+      <div style={{position:'relative', height:'100%', paddingLeft:'5.208vw', paddingRight:'5.208vw', maxWidth:'1920px', boxSizing:'border-box'}}>
+        <ul ref={listRef} style={{marginTop:'-9.375vw', listStyle:'none'}}>
+          <li ref={text01Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#ffec40', position:'absolute', top:'70%', left:'5.208vw'}}>TVING</li>
+          <li ref={text02Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#86bee7', position:'absolute', top:'70%', left:'50%', transform:'translate(-70%,-50%)'}}>SERIESON</li>
+          <li ref={text03Ref} className='w-max whitespace-nowrap block' style={{ fontSize: '13.542vw', fontWeight: 500, color: '#0cd886', position:'absolute', top:'70%', right:'5.208vw'}}>NETFLEX</li>
+        </ul>
       </div>
     </section>
   );

@@ -118,11 +118,11 @@ const Main03 = () => {
   
   
   return (
-    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', overflow:'hidden', height:'100%'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', overflow:'hidden', width:'1920px', height:'100%'}}>
         <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
-              <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block'}}>Thank you 
+              <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block', margin:'0 auto'}}>Thank you 
                 <br/>for being alive</h2> 
             </div>
             <div className='tags-wrap' style={{position:'absolute',top:'50%',left:'50%',width:'100%',height:'100%',maxWidth:'1920px',margin:'0 auto',transform:'translate(-50%,-50%)'}}>
