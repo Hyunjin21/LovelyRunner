@@ -12,10 +12,12 @@ const Main06 = () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: '0% 100%',
-        end: '0% 20%',
+        start: 'top top',
+        end: 'center center',
         scrub:1,
-        // markers: true
+        pin:true,
+        // pinSpacing:false,
+        markers: true
       }
     })
     .fromTo(textRef.current, 
