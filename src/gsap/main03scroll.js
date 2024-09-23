@@ -1,136 +1,37 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Scroll } from '@react-three/drei';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 const Main03scroll = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  const triggerRef = useRef(null);
-  const scrollRef = useRef(null);
-
-  let sections = gsap.utils.toArray(".part");
-
-  gsap.to(sections, {
-      xPercent: -100 * (sections.length -1),
-      ease: "none",
-      scrollTrigger: {
-          trigger: scrollRef.current,
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  // export default function HorizontalScrollComponent() {
+    const triggerRef = useRef(null);
+    const scrollRef = useRef(null);
+  
+    useEffect(() => {
+      // 가로 스크롤 트리거 설정
+      // const parts = gsap.utils.toArray('.part');
+      const horizontalScroll = gsap.to(scrollRef.current, {
+        // xPercent: -100 * (parts.length - 1), // 섹션 수만큼 가로 스크롤 이동
+        xPercent: -100 * (scrollRef.current.children.length - 1), // 섹션 수만큼 가로 스크롤 이동
+        ease: 'none',
+        scrollTrigger: {
+          trigger: triggerRef.current,
           pin: true,
           scrub: 1,
-          // snap: 1 / (sections.length -1),
-          end: "+=9600"
-          // end: document.querySelector("#parallax__cont").offsetWidth
-      }
-  })
-
-  // useEffect(() => {
-  //   const sections = gsap.utils.toArray(".part"); // 모든 .part 요소를 배열로 변환
-
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length - 1), // 가로로 스크롤할 총 길이
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: scrollRef.current, 
-  //       pin: true,
-  //       // pinSpacing: false, 
-  //       scrub: 1, 
-  //       // snap: 1 / (sections.length - 1),
-  //       end: "+=" + scrollRef.current.offsetWidth // 스크롤 종료 위치를 .scroll-part의 너비로 설정
-  //       // end: () => "+=" + scrollRef.current.scrollWidth // 스크롤 종료 위치 설정
-  //     }
-  //   });
-  // }, []);
-
-  // const part = document.querySelector('.part1');
-  // const parts = gsap.utils.toArray(".part");
-  // const tops = parts.map(part => ScrollTrigger.create({trigger:part, start:'top top'}));
-  // parts.forEach((part,i)=>{
-  //   ScrollTrigger.create({
-  //     trigger:part,
-  //     start:()=>part.offsetHeight < window.innerHeight ? 'top top' : 'bottom bottom',
-  //     pin:true,
-  //     pinSpacing:false
-  //   });
-  // });
-
-  // ScrollTrigger.create({
-  //   snap:{
-  //     snapTo: (progress, self) =>{
-  //       let partStart = tops.map(st => st.start),
-  //       snapScroll = gsap.utils.snap(partStart, self.scroll());
-  //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
-  //     },
-  //     duration: 0.5
-  //   }
-  // })
-//   let parts = gsap.utils.toArray('.part');
-//     gsap.to(parts, {
-//     xPercent: -100 * (parts.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger: ".scroll-part",
-//       pin: true,
-//       // pinSpacing: false,
-//       scrub: 1,
-//       markers: true,
-//       // snap: 1 / (parts.length - 1),
-//       end: '+=9600',
-//       start: 'top top',
-//       // end: () => "+=" + document.querySelector(".scroll-part").offsetWidth,
-//       // onUpdate: (self) => console.log("progress:", self.progress),
-//   // onEnter: () => console.log("entered"),
-//   // onLeave: () => console.log("left")
-//   }
-
-// });
-
-//     useEffect(() => {
-//     let parts = gsap.utils.toArray(".part");
-//     let scrollTween = gsap.to(parts, {
-//     xPercent: -100 * (parts.length - 1),
-//     ease:'none',
-//     scrollTrigger : {
-//       trigger:scrollRef.current,
-//       pin: true,
-//       scrub:1,
-//       start:'35% center',
-//       end:'40% center',
-//       markers:true
-//     }
-//   });
-
-//   scrollRef.current.forEach(parts => {
-//     gsap.timeline({
-//       scrollTrigger : {
-//         trigger: parts,
-//         containerAnimation: scrollTween,
-//         start : 'bottom right',
-//         end : 'center center',
-//         pin:1,
-//         scrub: 0.1,
-//         // markers: true,
-//       }
-//     })
-
-//     gsap.timeline({
-//       scrollTrigger : {
-//         trigger: parts,
-//         containerAnimation: scrollTween,
-//         start : 'center center',
-//         end : 'center left',
-//         pin:1,
-//         scrub: 1,
-//         // markers: true,
-//       }
-//     })
-//   });
-// return () => {
-//   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-// };
+          end: () => `+=${scrollRef.current.offsetWidth}`, // 전체 가로 스크롤 거리
+          invalidateOnRefresh: true,
+        },
+      });
   
-
-//   }, []);
-
+      return () => {
+        if (horizontalScroll) horizontalScroll.kill(); // 컴포넌트 언마운트 시 트리거 정리
+        // console.log(scrollRef.current.children.length-1);
+        // console.log(parts.length-1);
+        // console.log(scrollRef.current.children)
+      };
+    }, []);
   
   
   return (
@@ -212,9 +113,9 @@ const Main03scroll = () => {
             </div>
           </section>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> */}
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> */}
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script> */}
     </section>   
     
   );
