@@ -6,7 +6,7 @@ const Main05 = () => {
   
 
   return (
-    <section className='flex flex-col' style={{backgroundColor:'#fff', paddingTop:'200px', width:'1920px'}}>
+    <section className='flex flex-col overflow-hidden' style={{backgroundColor:'#fff', paddingTop:'200px', width:'1920px'}}>
         <div className='descript' style={{color:'#000', paddingTop:'260px'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
             <p className='w-max whitespace-nowrap' style={{fontSize:'5vw', fontWeight: 500, lineHeight: 1.15}}>

@@ -49,7 +49,7 @@ const Main06 = () => {
   
 
   return (
-    <section className='pen' style={{maxWidth:'1920px', width:'1920px', maxHeight:'850px', height:'850px', margin:0, padding:0,position:'relative'}}>
+    <section className='pen overflow-hidden' style={{maxWidth:'1920px', width:'1920px', maxHeight:'850px', height:'850px', margin:0, padding:0,position:'relative'}}>
       <div className='scroll-item'>
         <div className='img-wrap' style={{width:'67.708vw',height:'44.271vw', margin:'0 auto'}}>
           <img src='pen.png'/>

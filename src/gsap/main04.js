@@ -41,7 +41,7 @@ const Main04 = () => {
   
 
   return (
-    <section className='w-dvw' style={{backgroundColor:'#ffec40', width:'1920px'}}>
+    <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'1920px'}}>
         <div className='descript h-dvh' style={{color:'#000', paddingTop:'260px'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
             <span className='w-max whitespace-nowrap block' style={{fontSize:'5vw', fontWeight: 500}}>
@@ -57,7 +57,7 @@ const Main04 = () => {
             다시 살게 된 열아홉, 목표는 최애 류선재를 지키는 것!
             </span>
           </div>
-          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start' style={{width:'1920px',position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>
+          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'1920px',position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>
             <div ref={titleRef} className='uppercase leading-none'>
               <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.833vw', fontWeight: 700, color:'#86bee7', letterSpacing: '-0.625vw'}}>Lovely Runner</span>
             </div>
