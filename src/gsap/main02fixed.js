@@ -43,7 +43,7 @@ const Main02fixed = () => {
 
   }, []);
   return (
-    <section ref={triggerRef} className='scrolled-title overflow-x-clip h-screen w-full' style={{ backgroundColor: 'linear-gradient(#86bee7 20%, transparent)'}}>
+    <section ref={triggerRef} className='scrolled-title overflow-hidden w-full' style={{ backgroundColor: 'linear-gradient(#86bee7 20%, transparent)'}}>
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
         <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '18.750vw', fontWeight: 700, color: '#ffec40' }}>Lovely Runner</span>
       </div> 

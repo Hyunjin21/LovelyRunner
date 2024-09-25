@@ -41,9 +41,9 @@ const Main04 = () => {
   
 
   return (
-    <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%'}}>
+    <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px'}}>
         <div className='descript h-dvh' style={{color:'#000', paddingTop:'260px'}}>
-          <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
+          <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
             <span className='w-max whitespace-nowrap block' style={{fontSize:'5vw', fontWeight: 500}}>
             What if you get a chance<br/>to save your favorite?<br/>
             {/* The moment she let go of her will to live,<br/> "Ryu Sun-jae," a famous artist who let her live.<br/> */}
