@@ -10,7 +10,6 @@ const Main07 = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 가로 스크롤 애니메이션
     const containerAnimation = gsap.to(sectionRef.current, {
       x: () => -(sectionRef.current.scrollWidth - window.innerWidth) + 'px',
       ease: 'none',
@@ -18,6 +17,7 @@ const Main07 = () => {
         trigger: triggerRef.current,
         start: 'top top',
         end: () => "+=" + sectionRef.current.scrollWidth,
+        // end: () => "+=" + (sectionRef.current.scrollWidth - window.innerWidth),
         scrub: 1,
         pin: true,
         anticipatePin: 1,
@@ -38,7 +38,7 @@ const Main07 = () => {
   };
   
   return (
-    <section ref={triggerRef} className='img-wrapper overflow-hidden' style={{backgroundColor:'#fff', width:'100vw'}}>
+    <section ref={triggerRef} className='img-wrapper overflow-hidden' style={{backgroundColor:'#fff', width:'100%'}}>
         <div ref={sectionRef} className='img-scroll flex flex-row items-center' style={{padding:'0px 160px'}}>
           {/* 이미지 1 */}
           <div className='img-wrap' style={{ width: '30.208vw', height: '40.521vw', flex: '0 0 auto', marginRight:'40px'}}
