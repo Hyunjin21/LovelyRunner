@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main09 = () => {
   return (
-    <section className='h-dvh w-dvw flex flex-col justify-center items-center' style={{backgroundColor:'#ffec40', width:'1920px'}}>
+    <section className='h-dvh w-dvw flex flex-col justify-center items-center' style={{backgroundColor:'#ffec40', width:'100vw'}}>
         <h5>선재 업고 튀어</h5><br/>
         <p>편성 2024.04.08 ~ 2024.05.28</p><br/>
         <p>원작 원작소설 '내일의 으뜸'</p><br/>

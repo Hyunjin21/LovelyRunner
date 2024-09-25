@@ -29,7 +29,7 @@ function App() {
       <Main05 />
       <Main06 />
       <Main07 />
-      <Main08 />
+      {/* <Main08 /> */}
       <Main09 />
       {/* <section className='h-dvh text-white flex justify-center items-center border-4 border-red-600' style={{backgroundColor:'#ffec40'}}>
         <div className='text-8xl uppercase leading-tight'>

@@ -20,7 +20,7 @@ const Main03 = () => {
         });
       });
     });
-    
+
     // Clean up event listeners on component unmount
     return () => {
       tags.forEach(tag => {
@@ -35,8 +35,8 @@ const Main03 = () => {
   
   
   return (
-    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', overflow:'hidden', width:'1920px', height:'100%', overflow:'hidden'}}>
-        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'1920px', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
+    <section ref={triggerRef} style={{backgroundColor:'#fff', paddingBottom:'300px', overflow:'hidden', width:'100vw', height:'100%', overflow:'hidden'}}>
+        <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'100vw', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
               <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block', margin:'0 auto'}}>Thank you 

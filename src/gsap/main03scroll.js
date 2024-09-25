@@ -21,6 +21,7 @@ const Main03scroll = () => {
         scrub: 1,
         // scrub: 0.6,
         pin: true,
+        markers:true
       },
     });
 
@@ -31,7 +32,7 @@ const Main03scroll = () => {
 
 return (
   <>
-      <section className='overflow-hidden pb-[300px]'>
+      <section className='overflow-hidden pb-[300px] 100vw'>
           <div ref={triggerRef}>
               <div ref={sectionRef} className='h-dvh w-[500vw] flex flex-row relative bg-white'>
                   <div className='w-[500vw] h-dvh flex'>

@@ -40,7 +40,7 @@ const Main08 = () => {
   }, []);
 
   return (
-    <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#fff', width: '1920px', height: '100vh', position: 'relative' }}>
+    <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#fff', width: '100vw', height: '100vh', position: 'relative' }}>
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
         <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '20.833vw', fontWeight: 700, color: '#000' }}>Film Distributor</span>
       </div>

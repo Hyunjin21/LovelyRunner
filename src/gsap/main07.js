@@ -38,8 +38,8 @@ const Main07 = () => {
   };
   
   return (
-    <section ref={triggerRef} className='img-wrapper overflow-hidden' style={{backgroundColor:'#fff'}}>
-        <div ref={sectionRef} className='img-scroll flex flex-row items-center' style={{ maxHeight:'972px', height:'972px', padding:'0px 160px'}}>
+    <section ref={triggerRef} className='img-wrapper overflow-hidden' style={{backgroundColor:'#fff', width:'100vw'}}>
+        <div ref={sectionRef} className='img-scroll flex flex-row items-center' style={{padding:'0px 160px'}}>
           {/* 이미지 1 */}
           <div className='img-wrap' style={{ width: '30.208vw', height: '40.521vw', flex: '0 0 auto', marginRight:'40px'}}
             onMouseEnter={() => handleMouseEnter(0)} 

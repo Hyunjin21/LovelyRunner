@@ -6,7 +6,7 @@ const Main05 = () => {
   
 
   return (
-    <section className='flex flex-col overflow-hidden' style={{backgroundColor:'#fff', paddingTop:'200px', width:'1920px'}}>
+    <section className='flex flex-col overflow-hidden' style={{backgroundColor:'#fff', paddingTop:'200px', width:'100vw'}}>
         <div className='descript' style={{color:'#000', paddingTop:'260px'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
             <p className='w-max whitespace-nowrap' style={{fontSize:'5vw', fontWeight: 500, lineHeight: 1.15}}>
@@ -18,8 +18,8 @@ const Main05 = () => {
             </p>
           </div>
         </div>
-        <div className='h-dvh' style={{marginTop:'150px', paddingLeft:'3.646vw', paddingRight:'3.646vw', maxWidth:'1920px'}}>
-          <div className='video-wrap' style={{height:'100vh',borderRadius:'20px',overflow:'hidden',position:'relative'}}>
+        <div className='h-dvh' style={{marginTop:'150px', paddingLeft:'3.646vw', paddingRight:'3.646vw', width:'100vw'}}>
+          <div className='video-wrap' style={{width:'100%',height:'100vh',borderRadius:'20px',overflow:'hidden',position:'relative'}}>
             {/* <img src='books.jpg' style={{width:'100%',height:'100%',objectFit:'cover'}}/> */}
             <video className='w-dvw h-dvh object-cover absolute left-0 top-0' autoPlay muted loop playinline='true'> 
                 <source src='LovelyRunner.mp4' type="video/mp4" />
