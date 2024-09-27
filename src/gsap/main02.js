@@ -32,6 +32,7 @@ const Main02 = () => {
       }
     })
     .fromTo(textRef.current, { color:'#86bee7' }, { color:'#ffec40' }, 100)
+  
   }, []);
   
 

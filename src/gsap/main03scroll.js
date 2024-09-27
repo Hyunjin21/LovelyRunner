@@ -36,8 +36,7 @@ return (
   <>
       <section ref={triggerRef} className='overflow-x-clip h-screen w-full'>
         <div ref={sectionRef} className='h-full w-[500vw] flex flex-row relative bg-white'>
-            {/* <div className='w-[500vw] h-full flex'> */}
-              <div className='flex justify-between'>
+              {/* <div className='flex justify-between'> */}
                 {/* Page1 */}
                 <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
                      <div className='img_wrap'>
@@ -118,10 +117,9 @@ return (
                       </div>
                     </div>
                </div>
-              </div>
+              {/* </div> */}
 
             </div>
-        {/* </div> */}
       </section>
   </>
 );

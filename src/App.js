@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import React, { useEffect, useRef } from 'react';
 import './App.css';
 import Loading from './gsap/loading';
 import Main01 from './gsap/main01';
@@ -15,13 +15,37 @@ import Main08 from './gsap/main08';
 import Main09 from './gsap/main09';
 
 function App() {
-  
+  const headerRef = useRef(null);
+  const fixedRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY || window.pageYOffset; // Get the current scroll position
+      const windowHeight = window.innerHeight; // Get the viewport height
+      const targetPosition = 2 * windowHeight; // 200vh equivalent
+
+      if (scrollPosition > targetPosition) {
+        headerRef.current.classList.remove('hide');
+      } else {
+        headerRef.current.classList.add('hide');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Loading />
       <Main01 />
       <Main02 />
-      <Main02fixed />
+      <div ref={headerRef} className='hide'>
+        <Main02fixed />
+      </div>
       <Main03 />
       <Main03scroll /> 
       {/* <Main03index />  */}

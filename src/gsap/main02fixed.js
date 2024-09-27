@@ -26,7 +26,6 @@ const Main02fixed = () => {
     });
     // triggerRef의 높이 조정 및 배경색 변경
     gsap.to(triggerRef.current, {
-    //   background: 'linear-gradient(#86bee7 20%, transparent)',
       scrollTrigger: {
         trigger: triggerRef.current,
         start: '0% 100%',
@@ -35,16 +34,16 @@ const Main02fixed = () => {
         // markers: true
       },
       immediateRender: false,
-      position: 'fixed',
-      top: '24px',
-      zIndex:'99',
+      // position: 'fixed',
+      // top: '24px',
+      // zIndex:'9999',
       ease: 'none'
     });
 
   }, []);
   return (
-    <section ref={triggerRef} className='scrolled-title overflow-hidden w-full' style={{ backgroundColor: 'linear-gradient(#86bee7 20%, transparent)'}}>
-      <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
+    <section ref={triggerRef} className='scrolled-title overflow-hidden w-full flex justify-center' style={{ backgroundColor: 'linear-gradient(#86bee7 20%, transparent)'}}>
+      <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'fixed', top:'24px', zIndex:'9999', transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
         <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '18.750vw', fontWeight: 700, color: '#ffec40' }}>Lovely Runner</span>
       </div> 
     </section>
