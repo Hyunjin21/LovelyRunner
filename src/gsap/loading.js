@@ -1,66 +1,55 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { useRecoilState, atom, RecoilRoot } from "recoil";
 import { gsap } from "gsap";
 
-const Loading = () => {
-  const [progress, setProgress] = useState(0);
-  const textContainerRef = useRef(null);
+// 로딩 퍼센트 상태 관리
+const loadingPercentState = atom({
+  key: "loadingPercentState",
+  default: 0,
+});
 
+const Loading = () => {
+  const [percent, setPercent] = useRecoilState(loadingPercentState);
+  const [loadingFinished, setLoadingFinished] = useState(false);
+  
+  // 로딩 퍼센트 증가
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (prevProgress >= 100) {
+      setPercent((prev) => {
+        if (prev >= 100) {
           clearInterval(interval);
           return 100;
         }
-        return prevProgress + 1;
+        return prev + 1;
       });
-    }, 30); 
+    }, 30);
 
-    return () => clearInterval(interval);
-  }, []);
+    // 스크롤 막기
+    document.body.style.overflow = "hidden";
 
+    return () => {
+      document.body.style.overflow = "auto"; // 컴포넌트 언마운트 시 스크롤 다시 활성화
+    };
+  }, [setPercent]);
+
+  // 로딩이 끝나면 로딩 화면이 위로 사라지는 애니메이션
   useEffect(() => {
-    if (progress === 100) {
-      // 로딩이 100%일 때 1초 대기 후 텍스트 애니메이션 시작
-      setTimeout(() => {
-        startTextAnimation();
-      }, 2000); // 1초 멈춘 후 텍스트 애니메이션 실행
-    }
-  }, [progress]);
-
-  const startTextAnimation = () => {
-    const text = "LOVELY RUNNER";
-    const textContainer = textContainerRef.current;
-
-    if (textContainer) {
-      // 텍스트 컨테이너 초기화
-      textContainer.innerHTML = "";
-
-      // 텍스트를 한 글자씩 분리하여 span 태그로 감쌈
-      text.split("").forEach((letter, index) => {
-        const span = document.createElement("span");
-        span.textContent = letter;
-        span.style.display = "inline-block";
-        textContainer.appendChild(span);
-
-        // GSAP로 글자 애니메이션 적용
-        gsap.fromTo(
-          span,
-          { y: 30, opacity: 0 }, // 아래에서 시작
-          {
-            y: -30, // 위로 올라감
-            opacity: 1, // 나타남
-            duration: 0.8,
-            delay: index * 0.2, // 각 글자마다 0.2초 간격으로 애니메이션
-            ease: "power2.inOut",
-          }
-        );
+    if (percent === 100) {
+      gsap.to(".loading-container", {
+        y: "-100vh",
+        duration: 1,
+        onComplete: () => {
+          setLoadingFinished(true);
+          document.body.style.overflow = "auto"; // 스크롤 다시 활성화
+          document.body.style.overflowX = "hidden"; // 스크롤 다시 활성화
+        },
       });
     }
-  };
+  }, [percent]);
 
-  return (
+  return !loadingFinished ? ( // 로딩이 끝나면 컴포넌트를 사라지게 하기
     <div
+      className="loading-container"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -68,42 +57,33 @@ const Loading = () => {
         justifyContent: "center",
         height: "100vh",
         width: "100%",
-        backgroundColor: "skyblue",
+        background: "skyblue",
+        position: "fixed", // 고정 위치로 설정하여 전체 화면을 차지
+        top: 0,
+        left: 0,
+        zIndex: 9999, // 다른 요소 위에 있도록 z-index 설정
       }}
     >
-      {/* 로딩 퍼센트 표시 */}
-      {progress < 100 ? (
-        <p
-          style={{
-            fontSize: "30px",
-            color: "#fff",
-          }}
+      {percent < 100 && (
+        <h1
+          className="loading-percent"
+          style={{ marginTop: "10px", fontSize: "30px", color: "#fff" }}
         >
-          {progress}%
-        </p>
-      ) : (
-        <p
-          style={{
-            fontSize: "30px",
-            color: "#fff",
-          }}
-        >
-        </p>
-      )}
-
-      {/* 텍스트 애니메이션 컨테이너 */}
-      {progress === 100 && (
-        <div
-          ref={textContainerRef}
-          style={{
-            fontSize: "50px",
-            color: "#fff",
-            marginTop: "20px", // 약간의 간격 추가
-          }}
-        />
+          {percent}%
+        </h1>
       )}
     </div>
-  );
+  ) : null;
 };
+
+function App() {
+  return (
+    <RecoilRoot>
+      <div className="App">
+        <Loading />
+      </div>
+    </RecoilRoot>
+  );
+}
 
 export default Loading;

@@ -21,7 +21,7 @@ const Main03scroll = () => {
         scrub: 1,
         // scrub: 0.6,
         pin: true,
-        markers:true,
+        // markers:true,
         invalidateOnRefresh: true,
 
       },

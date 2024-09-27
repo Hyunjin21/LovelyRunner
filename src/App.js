@@ -13,6 +13,7 @@ import Main06 from './gsap/main06';
 import Main07 from './gsap/main07';
 import Main08 from './gsap/main08';
 import Main09 from './gsap/main09';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   const headerRef = useRef(null);
@@ -20,9 +21,9 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY || window.pageYOffset; // Get the current scroll position
-      const windowHeight = window.innerHeight; // Get the viewport height
-      const targetPosition = 2 * windowHeight; // 200vh equivalent
+      const scrollPosition = window.scrollY || window.pageYOffset; 
+      const windowHeight = window.innerHeight; 
+      const targetPosition = windowHeight;
 
       if (scrollPosition > targetPosition) {
         headerRef.current.classList.remove('hide');
@@ -40,7 +41,8 @@ function App() {
 
   return (
     <>
-      <Loading />
+    <RecoilRoot>
+      {/* <Loading /> */}
       <Main01 />
       <Main02 />
       <div ref={headerRef} className='hide'>
@@ -48,12 +50,11 @@ function App() {
       </div>
       <Main03 />
       <Main03scroll /> 
-      {/* <Main03index />  */}
       <Main04 />
       <Main05 />
       <Main06 />
       <Main07 />
-      {/* <Main08 /> */}
+      <Main08 />
       <Main09 />
       {/* <section className='h-dvh text-white flex justify-center items-center border-4 border-red-600' style={{backgroundColor:'#ffec40'}}>
         <div className='text-8xl uppercase leading-tight'>
@@ -64,9 +65,21 @@ function App() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    </RecoilRoot>
     </>
   );
 }
 
 export default App;
 
+// useEffect(() => {
+//   const handleResize = () => {
+//     setProgress(0);
+//     loadCanvasModels(setProgress); // 페이지 리사이즈 시 로딩
+//   };
+
+//   window.addEventListener("resize", handleResize);
+//   return () => {
+//     window.removeEventListener("resize", handleResize); // 클린업
+//   };
+// }, [setProgress]);
