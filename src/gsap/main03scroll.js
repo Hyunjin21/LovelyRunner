@@ -2,23 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import { Loader, useAnimations, useGLTF, useScroll } from '@react-three/drei';
-import { useFrame, useThree } from '@react-three/fiber';
-import { useRecoilValue } from 'recoil';
-// import { useTheme } from 'styled-components';
-import * as THREE from 'three';
-import { atom } from "recoil";
 
-const IsEnteredAtom = atom({
-    key: 'IsEnteredAtom',
-    default: false,
-})
+
 
 const Main03scroll = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-  const starRef = useRef<THREE.Object3D>(null);
-  const isEntered = useRecoilValue(IsEnteredAtom);
+  const dancerRef = useRef<THREE.Object3D>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -45,10 +35,6 @@ const Main03scroll = () => {
     };
   }, []);  
 
-  const { scene, animations } = useGLTF('/star.glb');
-  const { actions } = useAnimations(animations, starRef);
-  const three = useThree();
-
 return (
   <>
       <section ref={triggerRef} className='overflow-x-clip h-screen w-full'>
@@ -57,7 +43,6 @@ return (
                 {/* Page1 */}
                 <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
                      <div className='img_wrap'>
-                     <primitive ref={starRef} object={scene} scale={0.05}></primitive>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                        <span style={{color:'#0cd886',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART1</span>
