@@ -8,7 +8,6 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 const Main03scroll = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-  const dancerRef = useRef<THREE.Object3D>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
