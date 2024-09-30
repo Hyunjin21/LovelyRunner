@@ -2,8 +2,26 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useAnimations, useGLTF } from '@react-three/drei';
 
+// GLB 파일을 로드하고 자동으로 회전시키는 컴포넌트
+const StarModel = () => {
+  const starRef = useRef();
+  const { scene, animations, materials } = useGLTF('/blender/star.glb'); // star.glb 파일 경로
+  const { actions } = useAnimations(animations, starRef);
 
+  useFrame(() => {
+    if (starRef.current) {
+      starRef.current.rotation.y = -90; // 모델을 Y축을 기준으로 회전
+    }
+  });
+  useEffect(() => {
+    actions['star']?.play();
+    
+  })
+  return <primitive ref={starRef} object={scene} material={materials.StarModel} scale={5} />;
+};
 
 const Main03scroll = () => {
   const sectionRef = useRef(null);
@@ -57,7 +75,10 @@ return (
                 </div>
                 {/* Page2 */}
                 <div className='part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap'>
+                     <div className='img_wrap' style={{width:'540px', height:'540px', zIndex:'999', position:'absolute'}}>
+                      <Canvas>
+                        <StarModel />
+                      </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                        <span style={{color:'#86bee7',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART2</span>
