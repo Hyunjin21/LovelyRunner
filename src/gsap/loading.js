@@ -1,21 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRecoilState, atom, RecoilRoot } from "recoil";
 import { gsap } from "gsap";
 
-// 로딩 퍼센트 상태 관리
-const loadingPercentState = atom({
-  key: "loadingPercentState",
+
+const loadingProgress = atom({
+  key: "loadingProgress",
   default: 0,
 });
 
 const Loading = () => {
-  const [percent, setPercent] = useRecoilState(loadingPercentState);
+  const [progress, setProgress] = useRecoilState(loadingProgress);
   const [loadingFinished, setLoadingFinished] = useState(false);
+  const [displayProgress, setDisplayProgress] = useState("000");
+  const textContainerRef = useRef(null);
+  const progressContainerRef = useRef(null);
+
   
-  // 로딩 퍼센트 증가
   useEffect(() => {
     const interval = setInterval(() => {
-      setPercent((prev) => {
+      setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           return 100;
@@ -24,54 +27,179 @@ const Loading = () => {
       });
     }, 30);
 
-    // 스크롤 막기
     document.body.style.overflow = "hidden";
 
     return () => {
-      document.body.style.overflow = "auto"; // 컴포넌트 언마운트 시 스크롤 다시 활성화
+      document.body.style.overflow = "auto"; 
     };
-  }, [setPercent]);
+  }, [setProgress]);
 
-  // 로딩이 끝나면 로딩 화면이 위로 사라지는 애니메이션
   useEffect(() => {
-    if (percent === 100) {
-      gsap.to(".loading-container", {
-        y: "-100vh",
-        duration: 1,
-        onComplete: () => {
-          setLoadingFinished(true);
-          document.body.style.overflow = "auto"; // 스크롤 다시 활성화
-          document.body.style.overflowX = "hidden"; // 스크롤 다시 활성화
-        },
+    setDisplayProgress(String(progress).padStart(3, "0") + "%"); 
+  }, [progress]);
+
+  useEffect(() => {
+    if (progress === 100) {
+      setTimeout(() => {
+        startPercentAnimation();
+        gsap.to(".loading-progress", {
+          // opacity: 0,
+          display: 'none',
+          duration: 0.8,
+          onComplete: () => {
+            startTextAnimation();
+          },
+        });
+      }, 200); 
+    }
+  }, [progress]);
+
+
+  const startPercentAnimation = () => {
+    const progressText = "100%";
+    const progressContainer = progressContainerRef.current;
+
+    if (progressContainer) {
+      progressContainer.innerHTML = "";
+
+      progressText.split("").forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.style.display = "inline-block";
+        progressContainer.appendChild(span);
+
+        gsap.fromTo(
+          span,
+          { y: 0, opacity: 1 }, 
+          {
+            y: -40, 
+            opacity: 0, 
+            display: 'none',
+            duration: 0.8,
+            delay: index * 0.1, 
+            ease: "power2.inOut",
+          }
+        );
+      });
+      gsap.to(progressContainerRef.current, { display:'none'});
+    }
+  };
+
+  const startTextAnimation = () => {
+    const text = "LOVELY RUNNER";
+    const textContainer = textContainerRef.current;
+
+    if (textContainer) {
+      textContainer.innerHTML = "";
+
+      text.split("").forEach((letter, index) => {
+        const span = document.createElement("span");
+
+        if (letter === " ") {
+          span.style.width = "10px"; 
+        } else {
+          span.textContent = letter;
+        }
+
+        span.style.display = "inline-block";
+        textContainer.appendChild(span);
+
+        gsap.fromTo(
+          span,
+          { y: 40, opacity: 0 }, 
+          {
+            y: 0, 
+            opacity: 1, 
+            duration: 0.8,
+            delay: index * 0.1 + 1, 
+            ease: "power2.out",
+          }
+        );
+
+        gsap.to(span, 
+          {
+            y: -50, 
+            opacity: 1, 
+            duration: 0.8,
+            delay: index * 0.1 + 3, 
+            ease: "power2.inOut",
+            onComplete: () => {
+              if (index === text.length - 1) {
+                gsap.to(".loading-container", {
+                  y: "-100vh",
+                  duration: 1,
+                  onComplete: () => {
+                    setLoadingFinished(true);
+                    document.body.style.overflow = "auto"; 
+                    document.body.style.overflowX = "hidden"; 
+                  },
+                });
+              }
+            },
+          }
+        );
       });
     }
-  }, [percent]);
+  };
 
-  return !loadingFinished ? ( // 로딩이 끝나면 컴포넌트를 사라지게 하기
+  return !loadingFinished ? ( 
     <div
       className="loading-container"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
         height: "100vh",
         width: "100%",
-        background: "skyblue",
-        position: "fixed", // 고정 위치로 설정하여 전체 화면을 차지
+        background: "#86bee7",
+        position: "fixed", 
         top: 0,
         left: 0,
-        zIndex: 9999, // 다른 요소 위에 있도록 z-index 설정
+        zIndex: 9999, 
       }}
     >
-      {percent < 100 && (
-        <h1
-          className="loading-percent"
-          style={{ marginTop: "10px", fontSize: "30px", color: "#fff" }}
-        >
-          {percent}%
-        </h1>
-      )}
+      {/* 100% 텍스트 애니메이션 */}
+      <div
+        ref={progressContainerRef}
+        style={{
+          fontSize: '40px',
+          color: '#fff',
+          width:'auto',
+          height:'60px',
+          lineHeight:'60px',
+          textAlign:'center',
+          display:'block',
+          overflow:'hidden',
+          position:'relative',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%,-50%)',
+        }}
+      >
+        {/* 초기 100% 텍스트 */}
+        {displayProgress.split("").map((char, index) => (
+          <span key={index} style={{ display: "inline-block" }}>
+            {char}
+          </span>
+        ))}
+      </div>
+      
+      {/* 텍스트 애니메이션 */}
+      <div
+        ref={textContainerRef}
+        style={{
+          fontSize: '40px',
+          fontWeight:'600',
+          color: '#fff',
+          width:'auto',
+          height:'60px',
+          lineHeight:'60px',
+          textAlign:'center',
+          display:'block',
+          overflow:'hidden',
+          position:'relative',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%,-50%)',
+        }}  
+      />
     </div>
   ) : null;
 };
