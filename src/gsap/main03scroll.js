@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useAnimations, useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF, Environment } from '@react-three/drei';
 
 // GLB 파일을 로드하고 자동으로 회전시키는 컴포넌트
 const StarModel = () => {
@@ -20,7 +20,7 @@ const StarModel = () => {
     actions['star']?.play();
     
   })
-  return <primitive ref={starRef} object={scene} material={materials.StarModel} scale={5} />;
+  return <primitive ref={starRef} object={scene} material={materials.StarModel} scale={6} position={[-1.6, 0, 0]} />;
 };
 
 const Main03scroll = () => {
@@ -77,7 +77,9 @@ return (
                 <div className='part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
                      <div className='img_wrap' style={{width:'540px', height:'540px', zIndex:'999', position:'absolute'}}>
                       <Canvas>
-                        <StarModel />
+                        <StarModel  />
+                        <directionalLight intensity={0.1} position={[0, 10, 10]} />
+                        <Environment preset="studio" />
                       </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
