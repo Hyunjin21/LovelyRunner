@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useAnimations, useGLTF, Environment } from '@react-three/drei';
+<<<<<<< HEAD
 
 const ShowerModel = () => {
   const { scene, animations, materials } = useGLTF('/blender/shower.glb'); // GLB 파일 경로
@@ -19,6 +20,8 @@ const ShowerModel = () => {
     <primitive ref={showerRef} object={scene} material={materials.shower} scale={2.5} />
   );
 };
+=======
+>>>>>>> 9fc634e263eeb3f53b495607164f6fc2a463b574
 
 const StarModel = () => {
   const { scene, animations, materials } = useGLTF('/blender/star.glb'); // GLB 파일 경로
@@ -26,6 +29,7 @@ const StarModel = () => {
   const { actions } = useAnimations(animations, starRef);
 
   useEffect(() => {
+<<<<<<< HEAD
     Object.keys(actions).forEach((key) => {
       actions[key]?.play();  
     });
@@ -78,6 +82,12 @@ const PresentModel = () => {
   return (
     <primitive ref={presentRef} object={scene} material={materials.present} scale={2.5} />
   );
+=======
+    actions['star']?.play();
+    
+  })
+  return <primitive ref={starRef} object={scene} material={materials.StarModel} scale={6} position={[-1.6, 0, 0]} />;
+>>>>>>> 9fc634e263eeb3f53b495607164f6fc2a463b574
 };
 
 const Main03scroll = () => {
@@ -138,11 +148,18 @@ return (
                 </div>
                 {/* Page2 */}
                 <div className='part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
+<<<<<<< HEAD
                      <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <StarModel  />
                         <directionalLight intensity={1} position={[-5, 5, 5]} />
                         <ambientLight intensity={0.3} />
+=======
+                     <div className='img_wrap' style={{width:'540px', height:'540px', zIndex:'999', position:'absolute'}}>
+                      <Canvas>
+                        <StarModel  />
+                        <directionalLight intensity={0.1} position={[0, 10, 10]} />
+>>>>>>> 9fc634e263eeb3f53b495607164f6fc2a463b574
                         <Environment preset="studio" />
                       </Canvas>
                      </div>
