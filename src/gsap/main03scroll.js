@@ -3,24 +3,81 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useAnimations, useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF, Environment } from '@react-three/drei';
 
-// GLB 파일을 로드하고 자동으로 회전시키는 컴포넌트
+const ShowerModel = () => {
+  const { scene, animations, materials } = useGLTF('/blender/shower.glb'); // GLB 파일 경로
+  const showerRef = useRef();
+  const { actions } = useAnimations(animations, showerRef);
+
+  // useEffect(() => {
+  //   Object.keys(actions).forEach((key) => {
+  //     actions[key]?.play();  
+  //   });
+  // }, [actions]);
+  return (
+    <primitive ref={showerRef} object={scene} material={materials.shower} scale={2.5} />
+  );
+};
+
 const StarModel = () => {
+  const { scene, animations, materials } = useGLTF('/blender/star.glb'); // GLB 파일 경로
   const starRef = useRef();
-  const { scene, animations, materials } = useGLTF('/blender/star.glb'); // star.glb 파일 경로
   const { actions } = useAnimations(animations, starRef);
 
-  useFrame(() => {
-    if (starRef.current) {
-      starRef.current.rotation.y = -90; // 모델을 Y축을 기준으로 회전
-    }
-  });
   useEffect(() => {
-    actions['star']?.play();
-    
-  })
-  return <primitive ref={starRef} object={scene} material={materials.StarModel} scale={5} />;
+    Object.keys(actions).forEach((key) => {
+      actions[key]?.play();  
+    });
+  }, [actions]);
+  return (
+    <primitive ref={starRef} object={scene} material={materials.star} scale={2.5} />
+  );
+};
+
+const DreamModel = () => {
+  const { scene, animations, materials } = useGLTF('/blender/dream.glb'); // GLB 파일 경로
+  const dreamRef = useRef();
+  const { actions } = useAnimations(animations, dreamRef);
+
+  useEffect(() => {
+    Object.keys(actions).forEach((key) => {
+      actions[key]?.play();  
+    });
+  }, [actions]);
+  return (
+    <primitive ref={dreamRef} object={scene} material={materials.dream} scale={2.5} />
+  );
+};
+
+const SpringModel = () => {
+  const { scene, animations, materials } = useGLTF('/blender/spring.glb'); // GLB 파일 경로
+  const springRef = useRef();
+  const { actions } = useAnimations(animations, springRef);
+
+  useEffect(() => {
+    Object.keys(actions).forEach((key) => {
+      actions[key]?.play();  
+    });
+  }, [actions]);
+  return (
+    <primitive ref={springRef} object={scene} material={materials.spring} scale={2.5} />
+  );
+};
+
+const PresentModel = () => {
+  const { scene, animations, materials } = useGLTF('/blender/present.glb'); // GLB 파일 경로
+  const presentRef = useRef();
+  const { actions } = useAnimations(animations, presentRef);
+
+  useEffect(() => {
+    Object.keys(actions).forEach((key) => {
+      actions[key]?.play();  
+    });
+  }, [actions]);
+  return (
+    <primitive ref={presentRef} object={scene} material={materials.present} scale={2.5} />
+  );
 };
 
 const Main03scroll = () => {
@@ -59,7 +116,13 @@ return (
               {/* <div className='flex justify-between'> */}
                 {/* Page1 */}
                 <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap'>
+                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                      <Canvas style={{width:'100%', height:'100%'}}>
+                        <ShowerModel />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} />
+                        <ambientLight intensity={0.3} />
+                        <Environment preset="studio" />
+                      </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                        <span style={{color:'#0cd886',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART1</span>
@@ -75,9 +138,12 @@ return (
                 </div>
                 {/* Page2 */}
                 <div className='part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'540px', height:'540px', zIndex:'999', position:'absolute'}}>
-                      <Canvas>
-                        <StarModel />
+                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                      <Canvas style={{width:'100%', height:'100%'}}>
+                        <StarModel  />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} />
+                        <ambientLight intensity={0.3} />
+                        <Environment preset="studio" />
                       </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
@@ -94,8 +160,14 @@ return (
                </div>
                {/* Page3 */}
                <div className='part3 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                    <div className='img_wrap'>
-                    </div>
+                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                      <Canvas style={{width:'100%', height:'100%'}}>
+                        <DreamModel  />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} />
+                        <ambientLight intensity={0.3} />
+                        <Environment preset="studio" />
+                      </Canvas>
+                     </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                       <span style={{color:'#ff89a2',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART3</span>
                     </div>
@@ -110,8 +182,14 @@ return (
                </div>
                {/* Page4 */}
                <div className='part4 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                    <div className='img_wrap'>
-                    </div>
+                     {/* <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                      <Canvas style={{width:'100%', height:'100%'}}>
+                        <SpringModel  />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} />
+                        <ambientLight intensity={0.3} />
+                        <Environment preset="studio" />
+                      </Canvas>
+                     </div> */}
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                       <span style={{color:'#b296ff',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART4</span>
                     </div>
@@ -126,8 +204,14 @@ return (
                </div>
                {/* Page5 */}
                <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                    <div className='img_wrap'>
-                    </div>
+                     {/* <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                      <Canvas style={{width:'100%', height:'100%'}}>
+                        <PresentModel  />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} />
+                        <ambientLight intensity={0.3} />
+                        <Environment preset="studio" />
+                      </Canvas>
+                     </div> */}
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                       <span style={{color:'#ffeb35',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART5</span>
                     </div>
