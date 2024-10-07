@@ -1,79 +1,117 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Main09 = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const triggerRef = useRef(null);
+  const creditRef = useRef(null);
+  const productRef = useRef(null);
+  const programRef = useRef(null);
+  const informRef = useRef(null);
+  const actorRef = useRef(null);
+
+  useEffect(() => {
+    const sections = [creditRef.current, productRef.current, programRef.current, informRef.current, actorRef.current];
+
+    sections.forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: section,
+            start: 'top center',
+            end: 'top center',
+            markers: true,
+            scrub:1,
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }, []);
+
+  
+
   return (
-    <section className='credit-wrap flex justify-center items-center flex-col' style={{backgroundColor:'#ffec40', width:'100%', height:'100vh', position:'absolute', overflow:'hidden'}}>
-      <div className='credit flex justify-center items-center flex-col' style={{textAlign:'center', fontFamily:'Arial', whiteSpace:'nowrap', animation:'credits 20s linear infinite'}}>
-        <h3>선재 업고 튀어</h3><br/>
-        <div className='flex flex-row gap-[20px]'>
-          <div style={{textAlign:'right'}}>
-            <p>편성</p>
-            <p>원작</p>
-          </div>
-          <div style={{textAlign:'left'}}>
-            <p>2024.04.08 ~ 2024.05.28</p>
-            <p>원작소설 '내일의 으뜸'</p>
-          </div>
-        </div><br/>
-        <h3>제작정보</h3><br/>
-        <div className='flex flex-row gap-[20px]'>
-          <div style={{textAlign:'right'}}>
-            <p>제작사</p>
-            <p>CP</p>
-            <p>제작</p>
-            <p>연출</p>
-            <p>PD</p>
-            <p>극본</p>
-          </div>
-          <div style={{textAlign:'left'}}>
-            <p>CJ ENM 스튜디오스, 본팩토리</p>
-            <p>김호준</p>
-            <p>문석환, 오광희, 박순태</p>
-            <p>윤종호, 김태엽</p>
-            <p>박윤아</p>
-            <p>이시은</p>
-          </div>
-        </div><br/>
-        <h3>등장인물</h3><br/>
-        <div className='flex flex-row gap-[20px]'>
-          <div style={{textAlign:'right'}}>
-            <p>류선재 역</p>
-            <p>임솔 역</p>
-            <p>김태성 역</p>
-            <p>백인혁 역</p>
-          </div>
-          <div style={{textAlign:'left'}}>
-            <p>변우석</p>
-            <p>김혜윤</p>
-            <p>송건희</p>
-            <p>이승협</p>
-          </div>
+    <section className='credit-wrap' style={{ background:'#ffec40', width:'100%', margin:'0 auto', padding:'150px 0', position:'relative', textAlign:'center', overflow:'hidden', fontSize:'2rem', letterSpacing:'-0.025em'}}>
+      <div className='backgroundSpacer' style={{width:'100%', height:'100vh', backgroundColor:'#ffec40'}}></div>
+      <div ref={creditRef} className='section credit' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+        <h3 style={{ color:'#86bee7', fontSize:'10rem', fontWeight:'bold', textAlign:'center', marginBottom:'6rem'}}>CREDIT</h3>
+      </div>
+      <div ref={productRef} className='section production' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>PRODUCTION</h3>
+        <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
+          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>CJ ENM STUDIOS</li>
+          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>BON FACTORY</li>
+        </ul>
+      </div>
+      <div ref={programRef} className='section programmation' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+        <h3 style={{ color:'#86bee7',fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>PROGRAMMATION</h3>
+        <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
+          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>2024.04.08 ~ 2024.05.28</li>
+          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>The original novel 'The Best of Tomorrow'</li>
+        </ul>
+      </div>
+      <div ref={informRef} className='section program_inform' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>INFORMATION</h3>
+        <div style={{ display:'flex', flexFlow:'column', alignItems:'center'}}>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>CHIEF PRODUCER</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>KIM HO JUN</dd>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PRODUCTION</dt>
+            <div style={{ display:'flex', flexDirection:'column'}}>
+              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>MOON SEOK HWAN</dd>
+              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>OH KWANG HEE</dd>
+              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>PARK SOON TAE</dd>
+            </div>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>DIRECTOR</dt>
+            <div style={{ display:'flex', flexDirection:'column'}}>
+              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>YOON JONG HO</dd>
+              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>KIM TAE YEOP</dd>
+            </div>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PROGRAM DIRECTOR</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>PARK YOON A</dd>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PLAYWRIGHT</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>LEE SI EUN</dd>
+          </dl>
         </div>
-      </div>  
-    </section>     
+      </div>
+      <div ref={actorRef} className='section actor' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>CAST</h3>
+        <div style={{ display:'flex', flexFlow:'column', alignItems:'center'}}>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>RYU SEON JAE</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>BYEON WOO SEOK</dd>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>LIM SOL</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>KIM HYE YOON</dd>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>KIM TAE SEONG</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>SONG GEON HEE</dd>
+          </dl>
+          <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
+            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>BAEK IN HYEOK</dt>
+            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>LEE SEUNG HYUB</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    
   )
 }
 
 export default Main09
-
-
-
-{/* <span>편성 2024.04.08 ~ 2024.05.28</span><br/>
-<span>원작 원작소설 '내일의 으뜸'</span><br/>
-<span>제작사</span><br/>
-<span>CJ ENM 스튜디오스, 본팩토리</span><br/>
-<span>제작진</span><br/>
-<span>CP</span>
-<span>김호준</span><br/>
-<span>제작</span>
-<span>문석환, 오광희, 박순태</span><br/>
-<span>연출</span>
-<span>윤종호, 김태엽</span><br/>
-<span>PD</span>
-<span>박윤아</span><br/>
-<span>극본</span>
-<span>이시은</span><br/>
-<span>류선재 역 변우석</span><br/>
-<span>임솔 역 김혜윤</span><br/>
-<span>김태성 역 송건희</span><br/>
-<span>백인혁 역 이승협</span><br/> */}

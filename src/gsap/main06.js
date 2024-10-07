@@ -61,7 +61,7 @@ const Main06 = () => {
   // }, []);  
 
   return (
-    <section ref={triggerRef} className='pen overflow-x-clip h-screen w-full' style={{maxWidth:'1920px', width:'100%', height:'100vh', margin:0, padding:0,position:'relative', marginTop:'150px'}}>
+    <section ref={triggerRef} className='pen overflow-x-clip h-screen w-full' style={{ width:'100%', height:'100vh', margin:0, padding:0,position:'relative', marginTop:'150px'}}>
       <div className='scroll-item'>
         <div className='img-wrap' style={{width:'67.708vw',height:'44.271vw', margin:'0 auto'}}>
           <img src='pen.png'/>
@@ -69,7 +69,7 @@ const Main06 = () => {
       </div>
       <div ref={sectionRef} className='scroll-title h-dvh w-dvw flex justify-center items-center' style={{width:'100vw',backgroundColor:'#fff',position:'absolute',top:'50%',zIndex:-1,marginTop:'8vw',transform:'translateY(-50%)'}}>
         <div ref={titleRef} className='uppercase leading-none'>
-          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.8333vw', fontWeight: 700, color:'#86bee7',letterSpacing:'-0.625vw'}}>Lovely Runner</span>
+          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.8333vw', fontWeight: 700, color:'#ffec40',letterSpacing:'-0.625vw'}}>Lovely Runner</span>
         </div>
       </div>    
     </section>

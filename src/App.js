@@ -13,6 +13,7 @@ import Main06 from './gsap/main06';
 import Main07 from './gsap/main07';
 import Main08 from './gsap/main08';
 import Main09 from './gsap/main09';
+import Main10 from './gsap/main10';
 import { RecoilRoot } from 'recoil';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
       <Main07 />
       <Main08 />
       <Main09 />
+      <Main10 />
       {/* <section className='h-dvh text-white flex justify-center items-center border-4 border-red-600' style={{backgroundColor:'#ffec40'}}>
         <div className='text-8xl uppercase leading-tight'>
           <footer></footer>

@@ -41,8 +41,8 @@ const Main04 = () => {
   
 
   return (
-    <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px'}}>
-        <div className='descript h-dvh' style={{color:'#000', paddingTop:'260px'}}>
+    <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
+        <div className='descript' style={{color:'#000', paddingTop:'300px', height:'200vh'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
             <span className='w-max whitespace-nowrap block' style={{fontSize:'5vw', fontWeight: 500}}>
             What if you get a chance<br/>to save your favorite?<br/>
@@ -50,28 +50,27 @@ const Main04 = () => {
             {/* Desperate after his death,<br/>die-hard fan "Im Sol" goes back in time to 2008 to save his favorite!<br/> */}
             Nineteen to live again,<br/>my goal is <br/>to protect my favorite Ryu Sun-jae!
             </span>
-            <span className='w-max whitespace-nowrap' style={{fontSize:'2vw', fontWeight: 500, display:'block', paddingTop:'100px'}}>
+            <span className='w-max whitespace-nowrap' style={{fontSize:'1.8vw', fontWeight: 300, display:'block', paddingTop:'100px'}}>
             만약, 당신의 최애를 구할 수 있는 기회가 온다면?<br/>
             {/* 삶의 의지를 놓아버린 순간, 자신을 살게 해줬던 유명 아티스트 "류선재".<br/> */}
             {/* 그의 죽음으로 절망했던 열성팬 "임솔"이 최애를 살리기 위해 시간을 거슬러 2008년으로 돌아간다!<br/> */}
             다시 살게 된 열아홉, 목표는 최애 류선재를 지키는 것!
             </span>
           </div>
-          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%',position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>
+          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%', height:'100vh', position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>
             <div ref={titleRef} className='uppercase leading-none'>
               <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.833vw', fontWeight: 700, color:'#86bee7', letterSpacing: '-0.625vw'}}>Lovely Runner</span>
             </div>
-            <div className='img-gif' style={{position:'absolute', transform:'scale(0.5) rotate(30deg)',top:'26.302vw',right:'15.625vw'}}>
+            <div className='img-gif' style={{position:'absolute', transform:'scale(0.3) rotate(30deg)',top:'26.302vw',right:'11.625vw'}}>
               <div className='img-wrap' style={{position:'relative'}}>
                 <img style={{width:'100%', height:'100%', objectFit:'cover'}} src='umbrella.png'/>
               </div>
             </div>
           <div>
-              
             </div>
           </div>
         </div>
-        <div className='card h-dvh'></div>
+        {/* <div className='minHeight h-dvh' style={{width:'100%', height:'100vh',backgroundColor:'#ffec40', paddingTop:'300px',paddingBottom:'300px'}}></div> */}
     </section>    
   )
 }
