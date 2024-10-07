@@ -10,11 +10,11 @@ const ShowerModel = () => {
   const showerRef = useRef();
   const { actions } = useAnimations(animations, showerRef);
 
-  // useEffect(() => {
-  //   Object.keys(actions).forEach((key) => {
-  //     actions[key]?.play();  
-  //   });
-  // }, [actions]);
+  useEffect(() => {
+    Object.keys(actions).forEach((key) => {
+      actions[key]?.play();  
+    });
+  }, [actions]);
   return (
     <primitive ref={showerRef} object={scene} material={materials.shower} scale={2.5} />
   );
@@ -95,10 +95,9 @@ const Main03scroll = () => {
         trigger: triggerRef.current,
         start: "top top",
         end: "5000 top",
-        scrub: 1,
-        // scrub: 0.6,
+        // scrub: 1,
+        scrub: 0.6,
         pin: true,
-        // markers:true,
         invalidateOnRefresh: true,
 
       },
