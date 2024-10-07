@@ -117,15 +117,15 @@ const Main08 = () => {
 
         // 스크롤 다운 (아래로 이동)
         if (direction > 0) {
-          gsap.to(text01Ref.current, { opacity: 1, y: '-1000px', duration: 3, ease: 'power2.out' });
-          gsap.to(text02Ref.current, { opacity: 1, y: '-1000px', duration: 3, ease: 'power2.out', delay: 0.5 });
-          gsap.to(text03Ref.current, { opacity: 1, y: '-1000px', duration: 3, ease: 'power2.out', delay: 1 });
+          gsap.to(text01Ref.current, { opacity: 1, y: '-1300px', duration: 3, ease: 'power2.out' });
+          gsap.to(text02Ref.current, { opacity: 1, y: '-1300px', duration: 3, ease: 'power2.out', delay: 0.5 });
+          gsap.to(text03Ref.current, { opacity: 1, y: '-1300px', duration: 3, ease: 'power2.out', delay: 1 });
         } 
         // 스크롤 업 (위로 이동)
         else {
-          gsap.to(text03Ref.current, { opacity: 1, y: '0', duration: 3, ease: 'power2.out' });
-          gsap.to(text02Ref.current, { opacity: 1, y: '0', duration: 3, ease: 'power2.out', delay: 0.5 });
-          gsap.to(text01Ref.current, { opacity: 1, y: '0', duration: 3, ease: 'power2.out', delay: 1 });
+          gsap.to(text03Ref.current, { opacity: 1, y: '300px', duration: 3, ease: 'power2.out' });
+          gsap.to(text02Ref.current, { opacity: 1, y: '300px', duration: 3, ease: 'power2.out', delay: 0.5 });
+          gsap.to(text01Ref.current, { opacity: 1, y: '300px', duration: 3, ease: 'power2.out', delay: 1 });
         }
       }
     });
@@ -137,7 +137,7 @@ const Main08 = () => {
   }, []);
 
   return (
-    <section ref={triggerRef} className='scroll-title overflow-x-clip h-screen w-full' style={{ backgroundColor: '#fff', width: '100%', height: '100vh', position: 'relative', overflow:'hidden',marginTop:'12.5vw',marginBottom:'12.5vw', paddingTop:'260px' }}>
+    <section ref={triggerRef} className='scroll-title overflow-x-clip h-screen w-full' style={{ backgroundColor: '#fff', width: '100%', height: '100vh', position: 'relative', overflow:'hidden',marginTop:'12.5vw',marginBottom:'12.5vw', paddingTop:'300px', paddingBottom:'300px' }}>
       <div ref={titleRef} className='uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
         <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '20.833vw', fontWeight: 700, color: '#000' }}>Film Distributor</span>
       </div>
