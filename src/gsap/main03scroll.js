@@ -119,7 +119,7 @@ return (
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <ShowerModel />
                         <directionalLight intensity={1} position={[-5, 5, 5]} /> 
-                        <ambientLight S={0.3} />
+                        <ambientLight intensity={0.3} />
                         <Environment preset="studio" />
                       </Canvas>
                      </div>

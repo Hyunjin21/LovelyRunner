@@ -1,25 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useAnimations, useGLTF, Environment } from '@react-three/drei';
+
 
 const Main04 = () => {
-  // gsap.registerPlugin(ScrollTrigger);
-  // const triggerRef = useRef(null);
-  // const titleRef = useRef(null);
-  // const textRef = useRef(null);
-
-  // useEffect(()=>{
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: triggerRef.current,
-  //       start: '0% 100%',
-  //       end: '0% 20%',
-  //       scrub:1,
-  //       // markers: true
-  //     }
-  //   })
-  //   .fromTo(textRef.current, {x:'100%'}, {x:'0%', ease:'none', duration:5},0)
-  // },[]);
+  
 
   gsap.registerPlugin(ScrollTrigger);
   const triggerRef = useRef(null);
@@ -38,6 +25,22 @@ const Main04 = () => {
     })
     .fromTo(textRef.current, {x:'100%'}, {x:'-20%', ease:'none', duration:10},0)
   },[]);
+
+  const Umbrella = () => {
+    const { scene, animations, materials } = useGLTF('/blender/umbrella.glb'); // GLB 파일 경로
+    const umbrellaRef = useRef();
+    const { actions } = useAnimations(animations, umbrellaRef);
+  
+    useEffect(() => {
+      Object.keys(actions).forEach((key) => {
+        actions[key]?.play();  
+      });
+    }, [actions]);
+    return (
+      <primitive ref={umbrellaRef} object={scene} material={materials.umbrella} scale={2.5} />
+    );
+  };
+
   
 
   return (
@@ -61,16 +64,18 @@ const Main04 = () => {
             <div ref={titleRef} className='uppercase leading-none'>
               <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.833vw', fontWeight: 700, color:'#86bee7', letterSpacing: '-0.625vw'}}>Lovely Runner</span>
             </div>
-            <div className='img-gif' style={{position:'absolute', transform:'scale(0.3) rotate(30deg)',top:'26.302vw',right:'11.625vw'}}>
-              <div className='img-wrap' style={{position:'relative'}}>
-                <img style={{width:'100%', height:'100%', objectFit:'cover'}} src='umbrella.png'/>
-              </div>
-            </div>
-          <div>
+          </div>
+          <div className='img-box' style={{position:'relative'}}>
+            <div className='img_wrap' style={{position:'absolute',width:'300px' , height:'300px', zIndex:'999', top:'20.302vw', right:'11.625vw'}}>
+              <Canvas style={{width:'100%', height:'100%', transform:'scale(1.5)'}}>
+                <Umbrella />
+                <directionalLight intensity={1} position={[-5, 5, 5]} /> 
+                <ambientLight S={0.3} />
+                <Environment preset="studio" />
+              </Canvas>
             </div>
           </div>
         </div>
-        {/* <div className='minHeight h-dvh' style={{width:'100%', height:'100vh',backgroundColor:'#ffec40', paddingTop:'300px',paddingBottom:'300px'}}></div> */}
     </section>    
   )
 }
