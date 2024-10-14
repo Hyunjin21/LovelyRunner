@@ -64,7 +64,7 @@ const Main06 = () => {
     <section ref={triggerRef} className='pen overflow-x-clip h-screen w-full' style={{ width:'100%', height:'100vh', margin:0, padding:0,position:'relative', marginTop:'150px'}}>
       <div className='scroll-item'>
         <div className='img-wrap' style={{width:'67.708vw',height:'44.271vw', margin:'0 auto'}}>
-          <img src='pen.png'/>
+          {/* <img src='pen.png'/> */}
         </div>
       </div>
       <div ref={sectionRef} className='scroll-title h-dvh w-dvw flex justify-center items-center' style={{width:'100vw',backgroundColor:'#fff',position:'absolute',top:'50%',zIndex:-1,marginTop:'8vw',transform:'translateY(-50%)'}}>

@@ -25,7 +25,7 @@ const Main09 = () => {
             trigger: section,
             start: 'top center',
             end: 'top center',
-            markers: true,
+            // markers: true,
             scrub:1,
             toggleActions: 'play none none reverse',
           },

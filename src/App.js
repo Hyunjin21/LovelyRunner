@@ -6,7 +6,6 @@ import Main02 from './gsap/main02';
 import Main02fixed from './gsap/main02fixed';
 import Main03 from './gsap/main03';
 import Main03scroll from './gsap/main03scroll';
-import Main03index from './gsap/main03index';
 import Main04 from './gsap/main04';
 import Main05 from './gsap/main05';
 import Main06 from './gsap/main06';
@@ -18,12 +17,12 @@ import { RecoilRoot } from 'recoil';
 
 function App() {
   const headerRef = useRef(null);
-  const fixedRef = useRef(null);
+  const initialWidthRef = useRef(window.innerWidth);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY || window.pageYOffset; 
-      const windowHeight = window.innerHeight; 
+      const scrollPosition = window.scrollY || window.pageYOffset;
+      const windowHeight = window.innerHeight;
       const targetPosition = windowHeight;
 
       if (scrollPosition > targetPosition) {
@@ -31,6 +30,13 @@ function App() {
       } else {
         headerRef.current.classList.add('hide');
       }
+      const documentHeight = document.documentElement.scrollHeight;
+      const viewportBottom = scrollPosition + windowHeight;
+
+      if (viewportBottom >= documentHeight) {
+       headerRef.current.classList.add('hide');
+      } 
+    
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -40,10 +46,24 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth !== initialWidthRef.current) {
+        window.location.reload(); 
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize); 
+    };
+  }, []);
+
   return (
     <>
     <RecoilRoot>
-      {/* <Loading /> */}
+      <Loading />
       <Main01 />
       <Main02 />
       <div ref={headerRef} className='hide'>
@@ -58,11 +78,6 @@ function App() {
       <Main08 />
       <Main09 />
       <Main10 />
-      {/* <section className='h-dvh text-white flex justify-center items-center border-4 border-red-600' style={{backgroundColor:'#ffec40'}}>
-        <div className='text-8xl uppercase leading-tight'>
-          <footer></footer>
-        </div>
-      </section> */}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -74,14 +89,3 @@ function App() {
 
 export default App;
 
-// useEffect(() => {
-//   const handleResize = () => {
-//     setProgress(0);
-//     loadCanvasModels(setProgress); // 페이지 리사이즈 시 로딩
-//   };
-
-//   window.addEventListener("resize", handleResize);
-//   return () => {
-//     window.removeEventListener("resize", handleResize); // 클린업
-//   };
-// }, [setProgress]);
