@@ -66,7 +66,7 @@ const SpringModel = () => {
 };
 
 const PresentModel = () => {
-  const { scene, animations, materials } = useGLTF('/blender/present.glb'); // GLB 파일 경로
+  const { scene, animations, materials } = useGLTF('/blender/present2.glb'); // GLB 파일 경로
   const presentRef = useRef();
   const { actions } = useAnimations(animations, presentRef);
 
@@ -115,11 +115,11 @@ return (
               {/* <div className='flex justify-between'> */}
                 {/* Page1 */}
                 <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <ShowerModel />
-                        <directionalLight intensity={1} position={[-5, 5, 5]} />
-                        <ambientLight intensity={0.3} />
+                        <directionalLight intensity={1} position={[-5, 5, 5]} /> 
+                        <ambientLight S={0.3} />
                         <Environment preset="studio" />
                       </Canvas>
                      </div>
@@ -137,7 +137,7 @@ return (
                 </div>
                 {/* Page2 */}
                 <div className='part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <StarModel  />
                         <directionalLight intensity={1} position={[-5, 5, 5]} />
@@ -159,7 +159,7 @@ return (
                </div>
                {/* Page3 */}
                <div className='part3 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <DreamModel  />
                         <directionalLight intensity={1} position={[-5, 5, 5]} />
@@ -181,14 +181,14 @@ return (
                </div>
                {/* Page4 */}
                <div className='part4 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     {/* <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <SpringModel  />
                         <directionalLight intensity={1} position={[-5, 5, 5]} />
                         <ambientLight intensity={0.3} />
                         <Environment preset="studio" />
                       </Canvas>
-                     </div> */}
+                     </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                       <span style={{color:'#b296ff',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART4</span>
                     </div>
@@ -203,14 +203,14 @@ return (
                </div>
                {/* Page5 */}
                <div className='part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     {/* <div className='img_wrap' style={{width:'1080px', height:'1080px', zIndex:'999', position:'absolute'}}>
+                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <PresentModel  />
                         <directionalLight intensity={1} position={[-5, 5, 5]} />
                         <ambientLight intensity={0.3} />
                         <Environment preset="studio" />
                       </Canvas>
-                     </div> */}
+                     </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                       <span style={{color:'#ffeb35',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART5</span>
                     </div>
