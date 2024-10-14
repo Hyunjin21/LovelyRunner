@@ -35,8 +35,14 @@ function App() {
 
       if (viewportBottom >= documentHeight) {
        headerRef.current.classList.add('hide');
+<<<<<<< HEAD
       } 
     
+=======
+      } else {
+        headerRef.current.classList.remove('hide');
+      }
+>>>>>>> 409cf121da2bae58c75601dcea94b42288058122
     };
 
     window.addEventListener('scroll', handleScroll);
