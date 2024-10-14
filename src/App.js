@@ -48,6 +48,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
+      window.scrollTo(0,0);
       if (window.innerWidth !== initialWidthRef.current) {
         window.location.reload(); 
       }
