@@ -12,54 +12,10 @@
 html {
   font-family: 'Poppins', 'Pretendard', '돋움', Dotum, '굴림', Gulim, Verdana, Arial, sans-serif !important;
 }
-/* .App {
-  text-align: center;
-  font-weight: normal;
-  word-break: keep-all;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
 
 .hide {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* 부드럽게 보이거나 사라지도록 설정 */
+  transition: opacity 0.5s ease-in-out; 
 }
 .scrolled-title::before {
   background: linear-gradient(#86bee7 20%, transparent);
@@ -78,8 +34,8 @@ html {
 }
 
 .tags-wrap span:hover {
-  opacity: 0; /* Make it disappear */
-  transform: scale(1.2); /* Increase size slightly */
+  opacity: 0; 
+  transform: scale(1.2); 
 }
 
 
@@ -115,15 +71,35 @@ html {
 }
 
 
-/* 추가 */
-/* .imgBox {clip-path:inset(30%);}
-.imgBox:before {content: '';width:140px;height: 140px;border-radius: 100%;border: 1px solid #fff;background: url(/public/readMore2.png) no-repeat center/30px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(45deg);z-index: 2;transition: all .3s;}
-.imgBox:after {content: '';width: 0%;height: 0%;border-radius: 100%;background: #fff url(/public/readMore3.png) no-repeat center/130px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 1;animation-name:spin2;animation-duration: 10s;animation-timing-function: linear;animation-iteration-count: infinite;}
-.imgBox:hover img {filter: brightness(50%); transition: .3s;}
-.imgBox:hover::before {opacity: 1;}
-.imgBox:hover::after {opacity: 1;width: 140px;height: 140px;}
+@media (max-width: 768px) {
+  .part { 
+    flex-direction: row-reverse;
+  }
+  /* .img_wrap {
+    width: 100% !important;
+    height: 100% !important;
+  } */
+  .ost_text {
+    writing-mode: vertical-lr;
+  }
+  .ost_info {
+    margin-top: 0 !important;
+  }
 
-@keyframes spin2 {
-  0% {transform: translate(-50%,-50%) rotate(0deg);}
-  100% {transform: translate(-50%,-50%) rotate(360deg);}
-} */
+  .credit-wrap {
+    font-size: 1rem !important;
+  }
+  .credit h3 {
+    font-size: 2rem !important;
+  }
+  .section h3 {
+    font-size: 2rem !important;
+  }
+  .program_inform dt, dd {
+    width: 10rem !important;
+  }
+  .actor dt, dd {
+    width: 10rem !important;
+  }
+}
+

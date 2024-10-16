@@ -39,7 +39,7 @@ const Main09 = () => {
   return (
     <section className='credit-wrap' style={{ background:'#ffec40', width:'100%', margin:'0 auto', padding:'150px 0', position:'relative', textAlign:'center', overflow:'hidden', fontSize:'2rem', letterSpacing:'-0.025em'}}>
       <div className='backgroundSpacer' style={{width:'100%', height:'100vh', backgroundColor:'#ffec40'}}></div>
-      <div ref={creditRef} className='section credit' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
+      <div ref={creditRef} className='credit' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
         <h3 style={{ color:'#86bee7', fontSize:'10rem', fontWeight:'bold', textAlign:'center', marginBottom:'6rem'}}>CREDIT</h3>
       </div>
       <div ref={productRef} className='section production' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
