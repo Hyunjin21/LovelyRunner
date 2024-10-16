@@ -35,14 +35,8 @@ function App() {
 
       if (viewportBottom >= documentHeight) {
        headerRef.current.classList.add('hide');
-<<<<<<< HEAD
       } 
     
-=======
-      } else {
-        headerRef.current.classList.remove('hide');
-      }
->>>>>>> 409cf121da2bae58c75601dcea94b42288058122
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -54,6 +48,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
+      window.scrollTo(0,0);
       if (window.innerWidth !== initialWidthRef.current) {
         window.location.reload(); 
       }
@@ -69,7 +64,7 @@ function App() {
   return (
     <>
     <RecoilRoot>
-      <Loading />
+      {/* <Loading /> */}
       <Main01 />
       <Main02 />
       <div ref={headerRef} className='hide'>

@@ -148,6 +148,9 @@ const Loading = () => {
       style={{
         height: "100vh",
         width: "100%",
+        // overflowX:'hidden',
+        // boxSizing:'border-box',
+        maxWidth:'100vw',
         background: "#86bee7",
         position: "fixed", 
         top: 0,

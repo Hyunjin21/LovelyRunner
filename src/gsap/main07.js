@@ -39,6 +39,24 @@ const Main07 = () => {
   
   return (
     <section ref={triggerRef} className='img-wrapper overflow-x-clip' style={{backgroundColor:'#fff', width:'100%', marginTop:'300px'}}>
+        {/* 배경 텍스트 추가 */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '6vw', 
+          color: 'rgba(0, 0, 0, 0.2)',
+          fontWeight: 500,
+          whiteSpace: 'nowrap',
+          zIndex: 0, 
+        }}>
+          Even if you're in another time,<br/>
+          I'll jump over everything <br/>
+          and go see you.<br/>
+        </div>
+        
+        
         <div ref={sectionRef} className='img-scroll flex flex-row items-center' style={{padding:'0px 160px'}}>
           {/* 이미지 1 */}
           <div className='img-wrap' style={{ width: '30.208vw', height: '40.521vw', flex: '0 0 auto', marginRight:'40px'}}
