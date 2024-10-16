@@ -43,10 +43,10 @@ const Main09 = () => {
         <h3 style={{ color:'#86bee7', fontSize:'10rem', fontWeight:'bold', textAlign:'center', marginBottom:'6rem'}}>CREDIT</h3>
       </div>
       <div ref={productRef} className='section production' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>PRODUCTION</h3>
+        <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>PRODUCTION</h3>
         <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>CJ ENM STUDIOS</li>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>BON FACTORY</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>CJ ENM STUDIOS</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>BON FACTORY</li>
         </ul>
       </div>
       <div ref={programRef} className='section programmation' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>

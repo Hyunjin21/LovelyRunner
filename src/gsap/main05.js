@@ -9,7 +9,7 @@ const Main05 = () => {
     <section className='flex flex-col overflow-hidden' style={{backgroundColor:'#fff', width:'100%'}}>
         <div className='descript' style={{color:'#000', paddingTop:'260px'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
-            <p className='w-max whitespace-nowrap' style={{fontSize:'5vw', fontWeight: 500, lineHeight: 1.15}}>
+            <p className='w-max whitespace-nowrap text-6xl md:text-[5vw] font-medium'>
               Thank you <br/>for being alive
             </p>
             <p className='w-max whitespace-nowrap' style={{fontSize:'5vw', fontWeight: 500, lineHeight:1.15, display:'inline-block', position:'relative'}}>

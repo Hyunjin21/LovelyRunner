@@ -50,17 +50,15 @@ const Main04 = () => {
     <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
         <div className='descript' style={{color:'#000', paddingTop:'300px', height:'200vh'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
-            <span className='w-max whitespace-nowrap block' style={{fontSize:'5vw', fontWeight: 500}}>
-            What if you get a chance<br/>to save your favorite?<br/>
-            {/* The moment she let go of her will to live,<br/> "Ryu Sun-jae," a famous artist who let her live.<br/> */}
-            {/* Desperate after his death,<br/>die-hard fan "Im Sol" goes back in time to 2008 to save his favorite!<br/> */}
-            Nineteen to live again,<br/>my goal is <br/>to protect my favorite Ryu Sun-jae!
+            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-medium'>
+            What if you<br className='block md:hidden'/>get a chance<br className='block md:hidden'/>to save your<br className='block md:hidden'/>favorite?<br/>
+            <span className='hidden md:block'>
+            Nineteen to live again,<br className='block md:hidden'/>my goal is <br className='block md:hidden'/>to protect my favorite<br className='block md:hidden'/>Ryu Sun-jae!
             </span>
-            <span className='w-max whitespace-nowrap' style={{fontSize:'1.8vw', fontWeight: 300, display:'block', paddingTop:'100px'}}>
-            만약, 당신의 최애를 구할 수 있는 기회가 온다면?<br/>
-            {/* 삶의 의지를 놓아버린 순간, 자신을 살게 해줬던 유명 아티스트 "류선재".<br/> */}
-            {/* 그의 죽음으로 절망했던 열성팬 "임솔"이 최애를 살리기 위해 시간을 거슬러 2008년으로 돌아간다!<br/> */}
-            다시 살게 된 열아홉, 목표는 최애 류선재를 지키는 것!
+            </p>
+            <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-light block pt-[100px]'>
+            만약, 당신의 최애를<br className='block md:hidden'/>구할 수 있는 기회가 온다면?<br/>
+            다시 살게 된 열아홉,<br className='block md:hidden'/>목표는 최애 류선재를 지키는 것!
             </span>
           </div>
           <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%', height:'100vh', position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>

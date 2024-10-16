@@ -57,3 +57,6 @@ useFrame(() => { if (modelRef.current) { modelRef.current.rotation.y = mouseX * 
 >>>>>>> da24224df982840ff125f2af181feb2f29a42a09
 >>>>>>> 146692b95152324646fddb234ff3000c413f420b
 >>>>>>> ba7c747de38b87562fb450dac144e0bb237871ce
+
+
+우산은 스크롤에따라 X축 기준 회전

@@ -39,22 +39,20 @@ const Main07 = () => {
   };
   
   return (
-    <section ref={triggerRef} className='img-wrapper overflow-x-clip' style={{backgroundColor:'#fff', width:'100%', marginTop:'300px'}}>
+    <section ref={triggerRef} className='img-wrapper overflow-x-clip' style={{backgroundColor:'#fff', width:'100%', marginTop:'300px', height:'100vh'}}>
         {/* 배경 텍스트 추가 */}
         <div style={{
           position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontSize: '6vw', 
+          bottom: '0',
+          left: 0,
+          fontSize: '10vw', 
           color: 'rgba(0, 0, 0, 0.2)',
-          fontWeight: 500,
+          fontWeight: 600,
           whiteSpace: 'nowrap',
           zIndex: 0, 
+          lineHeight : 1.1
         }}>
-          Even if you're in another time,<br/>
-          I'll jump over everything <br/>
-          and go see you.<br/>
+          From<br/>Webtoon<br/>To Drama
         </div>
         
         

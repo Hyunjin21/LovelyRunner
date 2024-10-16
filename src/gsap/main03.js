@@ -39,24 +39,24 @@ const Main03 = () => {
         <div className='tags' style={{background:'linear-gradient(#ffec40, #fff)', height:'100vh', width:'100vw', marginBottom:'21.370vh',paddingTop:'18.518518518519vh'}}>
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
-              <h2 style={{fontSize:'13.542vw', fontWeight:500, display:'block', margin:'0 auto'}}>Thank you 
-                <br/>for being alive</h2> 
+              <h2 className='text-[20vw] md:text-[13.542vw] font-medium block my-0 mx-auto' >
+                Thank<br className='block md:hidden'/>you<br/>for being<br className='block md:hidden'/>alive
+              </h2> 
             </div>
-            <div className='tags-wrap' style={{position:'absolute',top:'50%',left:'50%',width:'100%',height:'100%',maxWidth:'1920px',margin:'0 auto',transform:'translate(-50%,-50%)'}}>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(7.00001deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'3%',left:'7%'}}>Eclipse</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(-27.5298deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'23%',left:'11.75%'}}>HanRiver</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(15.6298deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'-2%',left:'35.8%'}}>Wristwatch</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(-12.13deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'18%',left:'47.5%'}}>12AM</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(-28.93deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', top:'1.5%',right:'12%'}}>Video</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(19.83deg) scale(1.5, 1.5)', backgroundColor:'#86bee7', borderRadius:'3.604vw', fontSize:'2.225vw', color:'#fff', padding:'0.521vw 2.969vw', position:'absolute', top:'38%',left:'26.8%'}}>Swimming</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(8.80022deg) scale(1.5, 1.5)', backgroundColor:'#86bee7', borderRadius:'3.604vw', fontSize:'2.225vw', color:'#fff', padding:'0.521vw 2.969vw', position:'absolute', top:'36.5%',right:'16%'}}>TimeCapsule</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(33.1401deg) scale(1.5, 1.5)', backgroundColor:'#86bee7', borderRadius:'3.604vw', fontSize:'2.225vw', color:'#fff', padding:'0.521vw 2.969vw', position:'absolute', bottom:'4%',left:'6.5%'}}>Necklace</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(-14.03deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', bottom:'20%',left:'18%'}}>Snow</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(8.80022deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', bottom:'15%',left:'38%'}}>Wheelchair</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(13.7703deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', bottom:'-18%',left:'44%'}}>AmusementPark</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(-13.1099deg) scale(1.5, 1.5)', backgroundColor:'#86bee7', borderRadius:'3.604vw', fontSize:'2.225vw', color:'#fff', padding:'0.521vw 2.969vw', position:'absolute', bottom:'0%',right:'28.8%'}}>Umbrella</span>
-              <span className='tag' style={{opacity:1, visibility:'inherit', transform:'rotate(23.0498deg) scale(1.5, 1.5)', backgroundColor:'#fff', borderRadius:'3.604vw', fontSize:'2.225vw', padding:'0.521vw 2.969vw', position:'absolute', bottom:'9%',right:'8%'}}>MP3player</span>
-
+            <div className='tags-wrap absolute top-1/2 left-1/2 w-full h-full max-w-[1920px] mx-auto transform -translate-x-1/2 -translate-y-1/2'>
+              <span className='tag absolute top-[3%] left-[7%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(7.00001deg) scale(1.5, 1.5)'}}>Eclipse</span>
+              <span className='tag absolute top-[23%] left-[11.75%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-27.5298deg) scale(1.5, 1.5)'}}>HanRiver</span>
+              <span className='tag absolute top-[-2%] left-[35.8%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(15.6298deg) scale(1.5, 1.5)'}}>Wristwatch</span>
+              <span className='tag absolute top-[18%] left-[47.5%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-12.13deg) scale(1.5, 1.5)'}}>12AM</span>
+              <span className='tag absolute top-[1.5%] right-[12%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-28.93deg) scale(1.5, 1.5)'}}>Video</span>
+              <span className='tag absolute top-[38%] left-[26.8%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(19.83deg) scale(1.5, 1.5)'}}>Swimming</span>
+              <span className='tag absolute top-[36.5%] right-[16%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(8.80022deg) scale(1.5, 1.5)'}}>TimeCapsule</span>
+              <span className='tag absolute bottom-[4%] left-[6.5%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(33.1401deg) scale(1.5, 1.5)'}}>Necklace</span>
+              <span className='tag absolute bottom-[20%] left-[18%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-14.03deg) scale(1.5, 1.5)'}}>Snow</span>
+              <span className='tag absolute bottom-[15%] left-[38%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(8.80022deg) scale(1.5, 1.5)'}}>Wheelchair</span>
+              <span className='tag absolute bottom-[-18%] left-[44%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(13.7703deg) scale(1.5, 1.5)'}}>AmusementPark</span>
+              <span className='tag absolute bottom-[0%] right-[28.8%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-13.1099deg) scale(1.5, 1.5)'}}>Umbrella</span>
+              <span className='tag absolute bottom-[9%] right-[8%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(23.0498deg) scale(1.5, 1.5)'}}>MP3player</span>
             </div>
           </div>
         </div>
