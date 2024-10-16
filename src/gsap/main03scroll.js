@@ -213,14 +213,14 @@ return (
                       </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                       <span className='ost_text' style={{color:'#0cd886',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART1</span>
+                     <span className='ost_text text-[#0cd886] text-[60vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5px]'>PART1</span>
                      </div>
-                     <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
+                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto ml-auto mt-[4vw] md:mt-[10vw] w-full'>
                        <div className='ost_title'>
-                         <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Rain Shower</span>
+                         <span className='ost_text text-[#0cd886] text-[7vw] md:text-[4.167vw] md:text-[2.083vw] font-bold tracking-[1.5px]'>Rain Shower</span>
                        </div>
                        <div className='ost_singer'>
-                         <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Eclipse</span>
+                         <span className='ost_text text-[7vw] md:text-[18px] md:text-[10px] leading-[1.78] mt-[10px]'>Eclipse</span>
                        </div>
                      </div>
                 </div>

@@ -6,10 +6,10 @@ const Main10 = () => {
         <div className='footer-wrap' style={{ display:'flex', justifyContent:'center', alignItems:'center'}}>
             <div className='company' style={{ color:'#86bee7', textAlign:'center', fontSize:'1.3rem'}}>
                 <div className='logo' style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'6px', marginBottom:'18px'}}>
-                    <img src='/cj.svg' style={{ height:'72px', margin:'10px'}}/>
-                    <img src='/bon.svg' style={{ height:'45px', margin:'10px'}}/>
+                    <img src='/cj.svg' className='w-[100px] m-[10px]'/>
+                    <img src='/bon.svg' className='w-[132px] m-[10px]'/>
                 </div>
-                <p>ⓒ Lovely Runner Portfolio. All rights reserved.</p>
+                <p className='text-sm'>ⓒ Lovely Runner Portfolio. All rights reserved.</p>
             </div>
         </div>
     </footer>

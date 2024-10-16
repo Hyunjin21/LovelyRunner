@@ -88,14 +88,13 @@ html {
   .credit h3 {
     font-size: 2rem !important;
   }
-  .section h3 {
-    font-size: 2rem !important;
-  }
+ .section h3 {
+    font-size: 2rem ;
+  } */
   .program_inform dt, dd {
     width: 10rem !important;
   }
   .actor dt, dd {
     width: 10rem !important;
-  } */
+  } 
 }
-

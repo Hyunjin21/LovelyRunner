@@ -17,4 +17,6 @@ useFrame(() => { if (modelRef.current) { modelRef.current.rotation.y = mouseX * 
 
 3D 시계 3D라는거 알 수 있는 방법
 
+가로스크롤 센터
+
 우산은 스크롤에따라 X축 기준 회전
