@@ -15,7 +15,8 @@ const Main07 = () => {
       ease: 'none',
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: 'top top',
+        // start: 'top top',
+        start: 'center center',
         end: () => "+=" + sectionRef.current.scrollWidth,
         // end: () => "+=" + (sectionRef.current.scrollWidth - window.innerWidth),
         scrub: 1,

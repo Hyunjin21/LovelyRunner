@@ -32,12 +32,15 @@ const Main04 = () => {
     const { actions } = useAnimations(animations, umbrellaRef);
   
     useEffect(() => {
-      Object.keys(actions).forEach((key) => {
-        actions[key]?.play();  
-      });
+      if (actions && Object.keys(actions).length > 0) {
+        Object.keys(actions).forEach((key) => {
+          actions[key]?.play();  
+        });
+      }
     }, [actions]);
+  
     return (
-      <primitive ref={umbrellaRef} object={scene} material={materials.umbrella} scale={2.5} />
+      <primitive ref={umbrellaRef} object={scene} scale={1.1} />  // scale 값 조정
     );
   };
 
@@ -66,11 +69,11 @@ const Main04 = () => {
             </div>
           </div>
           <div className='img-box' style={{position:'relative'}}>
-            <div className='img_wrap' style={{position:'absolute',width:'300px' , height:'300px', zIndex:'999', top:'20.302vw', right:'11.625vw'}}>
-              <Canvas style={{width:'100%', height:'100%', transform:'scale(1.5)'}}>
+            <div className='img_wrap' style={{position:'absolute', width:'300px' , height:'300px', zIndex:'999', top:'28.302vw', right:'9.625vw'}}>
+              <Canvas style={{width:'100%', height:'100%'}}>
                 <Umbrella />
-                <directionalLight intensity={1} position={[-5, 5, 5]} /> 
-                <ambientLight S={0.3} />
+                <directionalLight intensity={2} position={[-5, 5, 5]} /> 
+                <ambientLight intensity={1} />
                 <Environment preset="studio" />
               </Canvas>
             </div>

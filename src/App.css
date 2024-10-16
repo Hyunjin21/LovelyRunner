@@ -75,17 +75,6 @@ html {
   .part { 
     flex-direction: row-reverse;
   }
-<<<<<<< HEAD
-  /* .img_wrap {
-    width: 100% !important;
-    height: 100% !important;
-  } */
-=======
-  .img_wrap {
-    width: 100% !important;
-    height: 100% !important;
-  }
->>>>>>> ba7c747de38b87562fb450dac144e0bb237871ce
   .ost_text {
     writing-mode: vertical-lr;
   }
