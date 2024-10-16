@@ -1,5 +1,6 @@
 https://dlgowns3695.github.io/AQuietPlace/
 
+<<<<<<< HEAD
 1. 메인화면
 2. 3D 시계 3D인것처럼
 3. 새로고침시 다시 처음부터 >>> 보류
@@ -18,3 +19,40 @@ useFrame(() => { if (modelRef.current) { modelRef.current.rotation.y = mouseX * 
 3D 시계 3D라는거 알 수 있는 방법
 
 가로스크롤 센터
+=======
+<<<<<<< HEAD
+1. 메인화면
+2. 3D 시계 3D인것처럼
+3. 새로고침시 다시 처음부터
+4. 모바일화면 수정
+5. 이미지들 뒤에 글씨 > 드라마 웹툰 
+=======
+
+// 마우스 추가
+
+  const [mouseX, setMouseX] = useState(0);
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMouseX(event.clientX / window.innerWidth - 0.5);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y = mouseX * Math.PI * 0.5;
+      // modelRef.current.rotation.z += 0.005; // y축 기준으로 회전
+    }
+  });
+
+크기조절
+
+ >>  3D 시계 3D라는거 알 수 있는 방법
+
+ 가로스크롤 센터
+>>>>>>> da24224df982840ff125f2af181feb2f29a42a09
+>>>>>>> 146692b95152324646fddb234ff3000c413f420b
