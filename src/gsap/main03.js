@@ -40,7 +40,7 @@ const Main03 = () => {
           <div className='leading-none' style={{position:'relative',paddingLeft: '1.465vw',paddingRight: '1.465vw'}}>
             <div className='title-wrap'>
               <h2 className='text-[20vw] md:text-[13.542vw] font-medium block my-0 mx-auto' >
-                Thank<br className='block md:hidden'/>you<br/>for being<br className='block md:hidden'/>alive
+                Thank<br className='block md:hidden'/> you<br/>for being<br className='block md:hidden'/> alive
               </h2> 
             </div>
             <div className='tags-wrap absolute top-1/2 left-1/2 w-full h-full max-w-[1920px] mx-auto transform -translate-x-1/2 -translate-y-1/2'>
