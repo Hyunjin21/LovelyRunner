@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -6,8 +6,6 @@ import { useAnimations, useGLTF, Environment } from '@react-three/drei';
 
 
 const Main04 = () => {
-  
-
   gsap.registerPlugin(ScrollTrigger);
   const triggerRef = useRef(null);
   const titleRef = useRef(null);
@@ -28,9 +26,42 @@ const Main04 = () => {
 
   const Umbrella = () => {
     const { scene, animations, materials } = useGLTF('/blender/umbrella.glb'); // GLB 파일 경로
-    const umbrellaRef = useRef();
+    const umbrellaRef = useRef(null);
     const { actions } = useAnimations(animations, umbrellaRef);
+    const [scrollY, setScrollY] = useState(0);
+    // const [mouseX, setMouseX] = useState(0);
   
+    // useEffect(() => {
+    //   const handleMouseMove = (event) => {
+    //     setMouseX(event.clientX / window.innerWidth - 0.5);
+    //   };
+    //   window.addEventListener("mousemove", handleMouseMove);
+    //   return () => {
+    //     window.removeEventListener("mousemove", handleMouseMove);
+    //   };
+    // }, []);
+  
+    // useFrame(() => {
+    //   if (umbrellaRef.current) {
+    //     umbrellaRef.current.rotation.x = mouseX * Math.PI * 0.5;
+    //   }
+    // });
+    useEffect(()=>{
+      const handleScroll = () => {
+        setScrollY(window.scrollY / window.innerHeight);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    useFrame(() => {
+      if (umbrellaRef.current) {
+        umbrellaRef.current.rotation.x = scrollY * 0.005;
+      }
+    });
+
     useEffect(() => {
       if (actions && Object.keys(actions).length > 0) {
         Object.keys(actions).forEach((key) => {

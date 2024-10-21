@@ -12,13 +12,13 @@ const Main05 = () => {
             <p className='w-max whitespace-nowrap text-6xl md:text-[5vw] font-medium'>
               Thank you <br/>for being alive
             </p>
-            <p className='w-max whitespace-nowrap' style={{fontSize:'5vw', fontWeight: 500, lineHeight:1.15, display:'inline-block', position:'relative'}}>
+            <p className='w-max whitespace-nowrap text-[10vw] md:text-[5vw] font-medium relative inline-block leading-[1.15]'>
               <span className='to'>to</span>
-              <span className='every' style={{color:'#ffec40', fontSize:'13.542vw', fontFamily:'Sacramento, cursive'}}> everyone</span>
+              <span className='every text-[#ffec40] text-[18.542vw] md:text-[13.542vw] font-sacramento'> everyone</span>
             </p>
           </div>
         </div>
-        <div className='h-dvh' style={{marginTop:'150px', paddingLeft:'3.646vw', paddingRight:'3.646vw', width:'100%'}}>
+        <div className='h-screen' style={{marginTop:'150px', paddingLeft:'3.646vw', paddingRight:'3.646vw', width:'100%'}}>
           <div className='video-wrap' style={{width:'100%',height:'100vh',borderRadius:'20px',overflow:'hidden',position:'relative'}}>
             {/* <img src='books.jpg' style={{width:'100%',height:'100%',objectFit:'cover'}}/> */}
             <video className='w-dvw h-dvh object-cover absolute left-0 top-0' autoPlay muted loop playinline='true'> 
