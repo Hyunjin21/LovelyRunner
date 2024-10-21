@@ -57,8 +57,6 @@ const Main03 = () => {
               <span className='tag opacity-100 absolute bottom-[50%] left-[34%] md:bottom-[-18%] md:left-[44%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(13.7703deg) scale(1.5, 1.5)'}}>AmusementPark</span>
               <span className='tag opacity-100 absolute bottom-[20%] right-[48.8%] md:bottom-[0%] md:right-[28.8%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-13.1099deg) scale(1.5, 1.5)'}}>Umbrella</span>
               <span className='tag opacity-100 absolute bottom-[-25%] right-[11%] md:bottom-[9%] md:right-[8%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(23.0498deg) scale(1.5, 1.5)'}}>MP3player</span>
-<<<<<<< HEAD
-=======
               <span className='tag absolute top-[3%] left-[7%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(7.00001deg) scale(1.5, 1.5)'}}>Eclipse</span>
               <span className='tag absolute top-[23%] left-[11.75%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-27.5298deg) scale(1.5, 1.5)'}}>HanRiver</span>
               <span className='tag absolute top-[-2%] left-[35.8%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(15.6298deg) scale(1.5, 1.5)'}}>Wristwatch</span>
@@ -72,7 +70,6 @@ const Main03 = () => {
               <span className='tag absolute bottom-[-18%] left-[44%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(13.7703deg) scale(1.5, 1.5)'}}>AmusementPark</span>
               <span className='tag absolute bottom-[0%] right-[28.8%] bg-[#86bee7] text-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(-13.1099deg) scale(1.5, 1.5)'}}>Umbrella</span>
               <span className='tag absolute bottom-[9%] right-[8%] bg-white rounded-[3.604vw] text-[6vw] md:text-[2.225vw] py-[0.521vw] px-[2.969vw]' style={{transform: 'rotate(23.0498deg) scale(1.5, 1.5)'}}>MP3player</span>
->>>>>>> eacc3ba00c72d09644412b7845200c53bfd5d827
             </div>
           </div>
         </div>
