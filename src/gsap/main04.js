@@ -81,10 +81,10 @@ const Main04 = () => {
     <section className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
         <div className='descript' style={{color:'#000', paddingTop:'300px', height:'200vh'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
-            <p className='w-max whitespace-nowrap leading-[1.1] block text-6xl md:text-[5vw] font-medium'>
-            What if you<br className='block md:hidden'/> get a chance<br/>to save your<br className='block md:hidden'/> favorite?<br/>
+            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-medium'>
+            What if you<br className='block md:hidden'/>get a chance<br className='block md:hidden'/>to save your<br className='block md:hidden'/>favorite?<br/>
             <span className='hidden md:block'>
-              Nineteen to live again,<br />my goal is <br />to protect my favorite Ryu Sun-jae!
+            Nineteen to live again,<br className='block md:hidden'/>my goal is <br className='block md:hidden'/>to protect my favorite<br className='block md:hidden'/>Ryu Sun-jae!
             </span>
             </p>
             <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-light block pt-[100px]'>

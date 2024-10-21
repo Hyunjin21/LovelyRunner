@@ -42,7 +42,7 @@ const Main09 = () => {
       <div ref={creditRef} className='credit opacity-0 text-center mb-[24rem]'>
         <h3 className='text-[6rem] md:text-[10rem] text-[#86bee7] font-bold text-center mb-[6rem]'>CREDIT</h3>
       </div>
-      <div ref={productRef} className='section production opacity-0 text-center mb-[24rem]'>
+      <div ref={productRef} className='section production' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
         <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>PRODUCTION</h3>
         <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
           <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>CJ ENM STUDIOS</li>

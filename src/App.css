@@ -75,29 +75,5 @@ html {
   .every::after {
     bottom: 20px;
   }
-  /* .part { 
-    flex-direction: row-reverse;
-  }
-  .ost_text {
-    writing-mode: vertical-lr;
-  } */
-  /* .ost_info {
-    margin-top: 0 !important;
-  } */
-
-  /* .credit-wrap {
-    font-size: 1rem !important;
-  }
-  .credit h3 {
-    font-size: 2rem !important;
-  }
- .section h3 {
-    font-size: 2rem ;
-  } */
-  /* .program_inform dt, dd {
-    width: 10rem !important;
-  }
-  .actor dt, dd {
-    width: 10rem !important;
-  }  */
+  
 }
