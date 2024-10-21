@@ -15,7 +15,8 @@ const Main07 = () => {
       ease: 'none',
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: 'top top',
+        // start: 'top top',
+        start: 'center center',
         end: () => "+=" + sectionRef.current.scrollWidth,
         // end: () => "+=" + (sectionRef.current.scrollWidth - window.innerWidth),
         scrub: 1,
@@ -38,63 +39,61 @@ const Main07 = () => {
   };
   
   return (
-    <section ref={triggerRef} className='img-wrapper overflow-x-clip' style={{backgroundColor:'#fff', width:'100%', marginTop:'300px'}}>
+    <section ref={triggerRef} className='img-wrapper overflow-x-clip' style={{backgroundColor:'#fff', width:'100%', marginTop:'300px', height:'100vh'}}>
         {/* 배경 텍스트 추가 */}
         <div style={{
           position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontSize: '6vw', 
+          bottom: '0',
+          left: 0,
+          fontSize: '10vw', 
           color: 'rgba(0, 0, 0, 0.2)',
-          fontWeight: 500,
+          fontWeight: 600,
           whiteSpace: 'nowrap',
           zIndex: 0, 
+          lineHeight : 1.1
         }}>
-          Even if you're in another time,<br/>
-          I'll jump over everything <br/>
-          and go see you.<br/>
+          From<br/>Webtoon<br/>To Drama
         </div>
         
         
-        <div ref={sectionRef} className='img-scroll flex flex-row items-center' style={{padding:'0px 160px'}}>
+        <div ref={sectionRef} className='img-scroll flex flex-row items-center h-screen' style={{padding:'0px 160px'}}>
           {/* 이미지 1 */}
-          <div className='img-wrap' style={{ width: '30.208vw', height: '40.521vw', flex: '0 0 auto', marginRight:'40px'}}
+          <div className='img-wrap w-[60.416vw] h-[81.042vw] md:w-[30.208vw] md:h-[40.521vw]' style={{flex: '0 0 auto', marginRight:'40px'}}
             onMouseEnter={() => handleMouseEnter(0)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 0 ? 'scene01_2.jpeg' : 'scene01.jpg'} style={{ width: '100%', height: '100%', borderRadius: '20px', transform: 'rotate(5deg)', objectFit: 'cover', objectPosition: 'center' }} />
           </div>
         
           {/* 이미지 2 */}
-          <div className='img-wrap' style={{ width: '49.323vw', height: '33.906vw', flex: '0 0 auto', marginRight:'40px' }}
+          <div className='img-wrap w-[98.646vw] h-[67.812vw] md:w-[49.323vw] md:h-[33.906vw]' style={{ flex: '0 0 auto', marginRight:'40px' }}
             onMouseEnter={() => handleMouseEnter(1)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 1 ? 'scene02_2.png' : 'scene02.png'} style={{ width: '100%', height: '100%', borderRadius: '20px', objectFit: 'cover', objectPosition: 'center' }} />
           </div>
         
           {/* 이미지 3 */}
-          <div className='img-wrap' style={{ width: '30.052vw', height: '40.990vw', flex: '0 0 auto', marginRight:'70px' }}
+          <div className='img-wrap w-[60.104vw] h-[81.980vw] md:w-[30.052vw] md:h-[40.990vw]' style={{ flex: '0 0 auto', marginRight:'70px' }}
             onMouseEnter={() => handleMouseEnter(2)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 2 ? 'scene03_2.png' : 'scene03.png'} style={{ width: '100%', height: '100%', borderRadius: '20px', objectFit: 'cover', transform: 'rotate(5deg)', objectPosition: 'center' }} />
           </div>
         
           {/* 이미지 4 */}
-          <div className='img-wrap' style={{ width: '33.698vw', height: '43.073vw', flex: '0 0 auto', marginRight:'40px' }}
+          <div className='img-wrap w-[67.396vw] h-[86.146vw] md:w-[33.698vw] md:h-[43.073vw]' style={{ flex: '0 0 auto', marginRight:'40px' }}
             onMouseEnter={() => handleMouseEnter(3)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 3 ? 'scene04_2.png' : 'scene04.png'} style={{ width: '100%', height: '100%', borderRadius: '20px', objectFit: 'cover', transform: 'rotate(-5deg)', objectPosition: 'center' }} />
           </div>
         
           {/* 이미지 5 */}
-          <div className='img-wrap' style={{ width: '34.635vw', height: '43.750vw', flex: '0 0 auto', marginRight:'40px' }}
+          <div className='img-wrap w-[69.270vw] h-[87.500vw] md:w-[34.635vw] md:h-[43.750vw]' style={{ flex: '0 0 auto', marginRight:'40px' }}
             onMouseEnter={() => handleMouseEnter(4)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 4 ? 'scene05_2.png' : 'scene05.png'} style={{ width: '100%', height: '100%', borderRadius: '20px', objectFit: 'cover', transform: 'rotate(10deg)', objectPosition: 'center' }} />
           </div>
         
           {/* 이미지 6 */}
-          <div className='img-wrap' style={{ width: '49.375vw', height: '33.906vw', flex: '0 0 auto', marginRight:'40px' }}
+          <div className='img-wrap w-[98.750vw] h-[67.812vw] md:w-[49.375vw] md:h-[33.906vw]' style={{ flex: '0 0 auto', marginRight:'40px' }}
             onMouseEnter={() => handleMouseEnter(5)} 
             onMouseLeave={handleMouseLeave}>
             <img src={hoveredIndex === 5 ? 'scene06_2.png' : 'scene06.png'} style={{ width: '100%', height: '100%', borderRadius: '20px', objectFit: 'cover', objectPosition: 'center' }} />

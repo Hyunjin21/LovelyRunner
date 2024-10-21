@@ -203,51 +203,51 @@ return (
       <section ref={triggerRef} className='overflow-x-clip h-screen w-full'>
         <div ref={sectionRef} className='h-full w-[500vw] flex flex-row relative bg-white'>
                 {/* Page1 */}
-                <div className='part part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
-                      <Canvas style={{width:'100%', height:'100%'}}>
-                        <ShowerModel />
-                        <directionalLight intensity={1} position={[-5, 5, 5]} /> 
-                        <ambientLight intensity={0.3} />
-                        <Environment preset="studio" />
-                      </Canvas>
-                     </div>
-                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                       <span className='ost_text' style={{color:'#0cd886',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART1</span>
-                     </div>
-                     <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
-                       <div className='ost_title'>
-                         <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Rain Shower</span>
-                       </div>
-                       <div className='ost_singer'>
-                         <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Eclipse</span>
-                       </div>
-                     </div>
+                <div className='part part1 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
+                  <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
+                    <Canvas style={{width:'100%', height:'100%'}}>
+                      <ShowerModel />
+                      <directionalLight intensity={1} position={[-5, 5, 5]} /> 
+                      <ambientLight intensity={0.3} />
+                      <Environment preset="studio" />
+                    </Canvas>
+                  </div>
+                  <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
+                    <span className='ost_text writing-vertical-lr md:writing-normal text-[#0cd886] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART1</span>
+                  </div>
+                  <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
+                    <div className='ost_title'>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Rain Shower</span>
+                    </div>
+                    <div className='ost_singer'>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Eclipse</span>
+                    </div>
+                  </div>
                 </div>
                 {/* Page2 */}
-                <div className='part part2 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
-                     <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
-                      <Canvas style={{width:'100%', height:'100%'}}>
-                        <StarModel  />
-                        <directionalLight intensity={1} position={[-5, 5, 5]} />
-                        <ambientLight intensity={0.3} />
-                        <Environment preset="studio" />
-                      </Canvas>
-                     </div>
-                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                       <span className='ost_text' style={{color:'#86bee7',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART2</span>
-                     </div>
-                     <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
-                      <div className='ost_title'>
-                        <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Star</span>
-                      </div>
-                      <div className='ost_singer'>
-                        <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>N.Flying</span>
-                      </div>
+                <div className='part part2 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
+                  <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
+                    <Canvas style={{width:'100%', height:'100%'}}>
+                      <StarModel  />
+                      <directionalLight intensity={1} position={[-5, 5, 5]} />
+                      <ambientLight intensity={0.3} />
+                      <Environment preset="studio" />
+                    </Canvas>
+                  </div>
+                  <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
+                    <span className='ost_text writing-vertical-lr md:writing-normal text-[#86bee7] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART2</span>
+                  </div>
+                  <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
+                    <div className='ost_title'>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Star</span>
                     </div>
+                    <div className='ost_singer'>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>N.Flying</span>
+                    </div>
+                  </div>
                </div>
                {/* Page3 */}
-               <div className='part part3 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
+               <div className='part part3 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
                      <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <DreamModel  />
@@ -257,19 +257,19 @@ return (
                       </Canvas>
                      </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                      <span className='ost_text' style={{color:'#ff89a2',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART3</span>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[#ff89a2] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART3</span>
                     </div>
-                    <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
+                    <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>It's like a dream</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>It's like a dream</span>
                       </div>
                       <div className='ost_singer'>
-                        <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Minnie (G)I-DLE</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Minnie (G)I-DLE</span>
                       </div>
                     </div>
                </div>
                {/* Page4 */}
-               <div className='part part4 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
+               <div className='part part4 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
                      <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <SpringModel  />
@@ -279,19 +279,19 @@ return (
                       </Canvas>
                      </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                      <span className='ost_text' style={{color:'#b296ff',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART4</span>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[#b296ff] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART4</span>
                     </div>
-                    <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
+                    <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Spring Snow</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Spring Snow</span>
                       </div>
                       <div className='ost_singer'>
-                        <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>10CM</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>10CM</span>
                       </div>
                     </div>
                </div>
                {/* Page5 */}
-               <div className='part part5 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
+               <div className='part part5 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
                      <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <PresentModel  />
@@ -301,14 +301,14 @@ return (
                       </Canvas>
                      </div>
                     <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                      <span className='ost_text' style={{color:'#ffeb35',fontSize:'34.375vw', fontFamily: "Oswald, sans-serif", fontWeight:700, letterSpacing:1.5}}>PART5</span>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[#ffeb35] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART5</span>
                     </div>
-                    <div className='ost_info flex justify-center items-center flex-col' style={{marginTop:'-9.635vw', width:'100%', marginLeft:'auto',marginRight:'auto'}}>
+                    <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text' style={{fontSize:'4.167vw', lineHeight:'1.04', fontWeight:500}}>Present</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Present</span>
                       </div>
                       <div className='ost_singer'>
-                        <span className='ost_text' style={{fontSize:'18px', lineHeight:'1.78', marginTop: '10px'}}>Ha Sung Woon</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Ha Sung Woon</span>
                       </div>
                     </div>
                </div>

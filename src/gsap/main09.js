@@ -37,75 +37,75 @@ const Main09 = () => {
   
 
   return (
-    <section className='credit-wrap' style={{ background:'#ffec40', width:'100%', margin:'0 auto', padding:'150px 0', position:'relative', textAlign:'center', overflow:'hidden', fontSize:'2rem', letterSpacing:'-0.025em'}}>
+    <section className='credit-wrap bg-[#ffec40] w-full mx-auto py-[150px] relative text-center overflow-hidden text-[1.2rem] md:text-[2rem] tracking-[-0.025em]'>
       <div className='backgroundSpacer' style={{width:'100%', height:'100vh', backgroundColor:'#ffec40'}}></div>
-      <div ref={creditRef} className='credit' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7', fontSize:'10rem', fontWeight:'bold', textAlign:'center', marginBottom:'6rem'}}>CREDIT</h3>
+      <div ref={creditRef} className='credit opacity-0 text-center mb-[24rem]'>
+        <h3 className='text-[6rem] md:text-[10rem] text-[#86bee7] font-bold text-center mb-[6rem]'>CREDIT</h3>
       </div>
-      <div ref={productRef} className='section production' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>PRODUCTION</h3>
+      <div ref={productRef} className='section production opacity-0 text-center mb-[24rem]'>
+        <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>PRODUCTION</h3>
         <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>CJ ENM STUDIOS</li>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>BON FACTORY</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>CJ ENM STUDIOS</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>BON FACTORY</li>
         </ul>
       </div>
-      <div ref={programRef} className='section programmation' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7',fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>PROGRAMMATION</h3>
+      <div ref={programRef} className='section programmation opacity-0 text-center mb-[24rem]'>
+        <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>PROGRAMMATION</h3>
         <ul style={{listStyle:'none', margin:'0', padding:'0'}}>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>2024.04.08 ~ 2024.05.28</li>
-          <li style={{ color:'#86bee7', fontWeight:'bold', lineHeight:'1.8'}}>The original novel 'The Best of Tomorrow'</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>2024.04.08 ~ 2024.05.28</li>
+          <li className='text-2xl text-[#86bee7] font-bold leading-[1.8]'>The original novel 'The Best of Tomorrow'</li>
         </ul>
       </div>
-      <div ref={informRef} className='section program_inform' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>INFORMATION</h3>
+      <div ref={informRef} className='section program_inform opacity-0 text-center mb-[24rem]'>
+        <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>INFORMATION</h3>
         <div style={{ display:'flex', flexFlow:'column', alignItems:'center'}}>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>CHIEF PRODUCER</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>KIM HO JUN</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[12rem] md:w-[20rem] text-right mr-[1rem]'>CHIEF PRODUCER</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>KIM HO JUN</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PRODUCTION</dt>
+            <dt className='float-left text-[#fffad4] font-bold w-[12rem] md:w-[20rem] text-right mr-[1rem]'>PRODUCTION</dt>
             <div style={{ display:'flex', flexDirection:'column'}}>
-              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>MOON SEOK HWAN</dd>
-              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>OH KWANG HEE</dd>
-              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>PARK SOON TAE</dd>
+              <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>MOON SEOK HWAN</dd>
+              <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>OH KWANG HEE</dd>
+              <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>PARK SOON TAE</dd>
             </div>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>DIRECTOR</dt>
+            <dt className='float-left text-[#fffad4] font-bold w-[12rem] md:w-[20rem] text-right mr-[1rem]'>DIRECTOR</dt>
             <div style={{ display:'flex', flexDirection:'column'}}>
-              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>YOON JONG HO</dd>
-              <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>KIM TAE YEOP</dd>
+              <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>YOON JONG HO</dd>
+              <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>KIM TAE YEOP</dd>
             </div>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PROGRAM DIRECTOR</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>PARK YOON A</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[12rem] md:w-[20rem] text-right mr-[1rem]'>PROGRAM DIRECTOR</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>PARK YOON A</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'20rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>PLAYWRIGHT</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'20rem', textAlign:'left', lineHeight:'1.8'}}>LEE SI EUN</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[12rem] md:w-[20rem] text-right mr-[1rem]'>PLAYWRIGHT</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[12rem] md:w-[20rem] text-left leading-[1.8]'>LEE SI EUN</dd>
           </dl>
         </div>
       </div>
-      <div ref={actorRef} className='section actor' style={{ opacity:'0', textAlign:'center', marginBottom:'24rem'}}>
-        <h3 style={{ color:'#86bee7', fontSize:'4rem', fontWeight:'bold', marginBottom:'6rem'}}>CAST</h3>
+      <div ref={actorRef} className='section actor opacity-0 text-center mb-[24rem]'>
+        <h3 className='text-5xl md:text-[4rem] font-bold text-[#86bee7] mb-[2rem] md:mb-[6rem]'>CAST</h3>
         <div style={{ display:'flex', flexFlow:'column', alignItems:'center'}}>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>RYU SEON JAE</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>BYEON WOO SEOK</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[10rem] md:w-[16rem] text-right mr-[1rem]'>RYU SEON JAE</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[11rem] md:w-[18rem] text-left leading-[1.8]'>BYEON WOO SEOK</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>LIM SOL</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>KIM HYE YOON</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[10rem] md:w-[16rem] text-right mr-[1rem]'>LIM SOL</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[11rem] md:w-[18rem] text-left leading-[1.8]'>KIM HYE YOON</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>KIM TAE SEONG</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>SONG GEON HEE</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[10rem] md:w-[16rem] text-right mr-[1rem]'>KIM TAE SEONG</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[11rem] md:w-[18rem] text-left leading-[1.8]'>SONG GEON HEE</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt style={{ float:'left', fontWeight:'bold', width:'16rem', marginRight:'1rem', textAlign:'right', color:'#fffad4'}}>BAEK IN HYEOK</dt>
-            <dd style={{ float:'left', color:'#86bee7', fontWeight:'bold', width:'18rem', textAlign:'left', lineHeight:'1.8'}}>LEE SEUNG HYUB</dd>
+            <dt className='float-left text-[#fffad4] font-bold w-[10rem] md:w-[16rem] text-right mr-[1rem]'>BAEK IN HYEOK</dt>
+            <dd className='float-left text-[#86bee7] font-bold w-[11rem] md:w-[18rem] text-left leading-[1.8]'>LEE SEUNG HYUB</dd>
           </dl>
         </div>
       </div>

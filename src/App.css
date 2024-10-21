@@ -72,34 +72,32 @@ html {
 
 
 @media (max-width: 768px) {
-  .part { 
-    flex-direction: row-reverse;
+  .every::after {
+    bottom: 20px;
   }
-  .img_wrap {
-    width: 100% !important;
-    height: 100% !important;
+  /* .part { 
+    flex-direction: row-reverse;
   }
   .ost_text {
     writing-mode: vertical-lr;
-  }
-  .ost_info {
+  } */
+  /* .ost_info {
     margin-top: 0 !important;
-  }
+  } */
 
-  .credit-wrap {
+  /* .credit-wrap {
     font-size: 1rem !important;
   }
   .credit h3 {
     font-size: 2rem !important;
   }
-  .section h3 {
-    font-size: 2rem !important;
-  }
-  .program_inform dt, dd {
+ .section h3 {
+    font-size: 2rem ;
+  } */
+  /* .program_inform dt, dd {
     width: 10rem !important;
   }
   .actor dt, dd {
     width: 10rem !important;
-  }
+  }  */
 }
-
