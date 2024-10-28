@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 import gsap from 'gsap';
-import { useRef } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Main02 = () => {
@@ -8,6 +7,7 @@ const Main02 = () => {
   const triggerRef = useRef(null);
   const titleRef = useRef(null);
   const textRef = useRef(null);
+
 
   useEffect(() => {
     // 텍스트 x축 이동

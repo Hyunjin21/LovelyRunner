@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Main03 = () => {
   gsap.registerPlugin(ScrollTrigger);
   const triggerRef = useRef(null);
-  // const scrollRef = useRef([]);
 
   useEffect(() => {
     const tags = document.querySelectorAll('.tag');
@@ -21,12 +20,10 @@ const Main03 = () => {
       });
     });
 
-    // Clean up event listeners on component unmount
     return () => {
       tags.forEach(tag => {
         tag.removeEventListener('mouseenter', () => {});
       });
-      // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
 
 
