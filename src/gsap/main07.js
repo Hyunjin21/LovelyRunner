@@ -107,21 +107,6 @@ const Main07 = () => {
 export default Main07
 
 
-{/* <div className='h-dvh' style={{color:'#000', paddingTop:'260px'}}>
-          <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw',paddingBottom:'10.208vw', transform:'translate(0px,0px)'}}>
-            <p className='w-max whitespace-nowrap block' style={{fontSize:'4vw', fontWeight: 500, fontFamily:'DOSSaemmul', position:'absolute'}}>
-            앞으로 Łйㄱr 옆 딱 붙øłnㅓ ズl켜줄つㅓl! <br/> 
-            류선재! LIㄱr Łй 별○l○F <br/>
-            ㅁı치겠⊂ト 임솔, 너 ㄸĦ문øłl...
-            앞으로 내가 옆에 딱 붙어서 지켜줄게!<br/>
-            류선재! 니가 내 별이야<br/>
-            미치겠다 임솔, 너 때문에...
-            </p>
-            <div className='img-wrap ani' style={{width: '16.615vw', height: '16.615vw', margin:'0 auto', transform:'translate3d(0px,0px,0px) rotate(0deg)'}}>
-              <img src='acorn.png'/>
-            </div>
-          </div>
-        </div> */}
 
 
 

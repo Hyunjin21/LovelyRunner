@@ -20,7 +20,6 @@ const Main05 = () => {
         </div>
         <div className='h-screen' style={{marginTop:'150px', paddingLeft:'3.646vw', paddingRight:'3.646vw', width:'100%'}}>
           <div className='video-wrap' style={{width:'100%',height:'100vh',borderRadius:'20px',overflow:'hidden',position:'relative'}}>
-            {/* <img src='books.jpg' style={{width:'100%',height:'100%',objectFit:'cover'}}/> */}
             <video className='w-dvw h-dvh object-cover absolute left-0 top-0' autoPlay muted loop playinline='true'> 
                 <source src='LovelyRunner.mp4' type="video/mp4" />
             </video>

@@ -25,7 +25,7 @@ const Main01 = () => {
 
   return (
     <section className='w-dvw flex justify-center items-center' style={{backgroundColor:'#ffec40', width:'100%', height:'100vh'}}>
-      <img src='main.png'></img>
+      {/* <img src='main.png'></img> */}
       <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
         <Canvas style={{width:'100%', height:'100%'}}>
         <Opening />
