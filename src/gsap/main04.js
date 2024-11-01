@@ -61,23 +61,23 @@ const Main04 = () => {
   
 
   return (
-    <section ref={sectionRef} className='w-dvw overflow-hidden' style={{backgroundColor:'#ffec40', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
+    <section ref={sectionRef} className='w-dvw overflow-hidden' style={{backgroundColor:'#6abbff', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
         <div className='descript' style={{color:'#000', paddingTop:'300px', height:'200vh'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
-            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-medium'>
+            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-normal'>
             What if you<br className='block md:hidden'/> get a chance<br className='block'/>to save your<br className='block md:hidden'/> favorite?<br/>
             <span className='hidden md:block'>
-            Nineteen to live again,<br className='block'/> my goal is <br className='block'/>to protect my favorite<br className='block md:hidden'/> Ryu Sun-jae!
+            Nineteen to live again,<br className='block'/> my goal is to protect <br className='block'/>my favorite<br className='block md:hidden'/> Ryu Sun-jae!
             </span>
             </p>
-            <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-light block pt-[100px]'>
+            <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-normal block pt-[100px] leading-[1.2]'>
             만약, 당신의 최애를<br className='block md:hidden'/> 구할 수 있는 기회가 온다면?<br/>
             다시 살게 된 열아홉,<br className='block md:hidden'/> 목표는 최애 류선재를 지키는 것!
             </span>
           </div>
-          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%', height:'100vh', position:'absolute',backgroundColor:'#ffec40', paddingTop:'260px',paddingBottom:'260px'}}>
+          <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%', height:'100vh', position:'absolute',backgroundColor:'#6abbff', paddingTop:'260px',paddingBottom:'260px'}}>
             <div ref={titleRef} className='uppercase leading-none'>
-              <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.833vw', fontWeight: 700, color:'#86bee7', letterSpacing: '-0.625vw'}}>Lovely Runner</span>
+              <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.833vw', fontWeight: 300, color:'#fd6b98', letterSpacing: '-0.625vw'}}>Lovely Runner</span>
             </div>
           </div>
           <div className='img-box' style={{position:'relative'}}>

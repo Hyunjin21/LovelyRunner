@@ -217,7 +217,7 @@ return (
                      </div>
                      <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                        <div className='ost_title'>
-                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Rain Shower</span>
+                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Rain Shower</span>
                        </div>
                        <div className='ost_singer'>
                          <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Eclipse</span>
@@ -239,7 +239,7 @@ return (
                   </div>
                   <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                     <div className='ost_title'>
-                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Star</span>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Star</span>
                     </div>
                     <div className='ost_singer'>
                       <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>N.Flying</span>
@@ -261,7 +261,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>It's like a dream</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>It's like a dream</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Minnie (G)I-DLE</span>
@@ -283,7 +283,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Spring Snow</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Spring Snow</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>10CM</span>
@@ -305,7 +305,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Present</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Present</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Ha Sung Woon</span>

@@ -9,12 +9,12 @@ const Main05 = () => {
     <section className='flex flex-col overflow-hidden' style={{backgroundColor:'#fff', width:'100%'}}>
         <div className='descript' style={{color:'#000', paddingTop:'260px'}}>
           <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw', transform:'translate(0px,0px)'}}>
-            <p className='w-max whitespace-nowrap text-6xl md:text-[5vw] font-medium'>
+            <p className='w-max whitespace-nowrap text-6xl md:text-[5vw] font-normal'>
               Thank you <br/>for being alive
             </p>
-            <p className='w-max whitespace-nowrap text-[10vw] md:text-[5vw] font-medium relative inline-block leading-[1.15]'>
+            <p className='w-max whitespace-nowrap text-[10vw] md:text-[5vw] font-normal relative inline-block leading-[1.15]'>
               <span className='to'>to</span>
-              <span className='every text-[#ffec40] text-[18.542vw] md:text-[13.542vw] font-sacramento'> everyone</span>
+              <span className='every text-[#6abbff] text-[18.542vw] md:text-[13.542vw] font-sacramento'> everyone</span>
             </p>
           </div>
         </div>

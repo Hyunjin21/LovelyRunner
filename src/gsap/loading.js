@@ -149,7 +149,7 @@ const Loading = () => {
         height: "100vh",
         width: "100%",
         maxWidth:'100vw',
-        background: "#86bee7",
+        background: "#fe97b6",
         position: "fixed", 
         top: 0,
         left: 0,
@@ -187,7 +187,7 @@ const Loading = () => {
         ref={textContainerRef}
         style={{
           fontSize: '40px',
-          fontWeight:'600',
+          fontWeight:'400',
           color: '#fff',
           width:'auto',
           height:'60px',

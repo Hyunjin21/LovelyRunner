@@ -114,7 +114,7 @@ const Main06 = () => {
       </div>
       <div ref={triggerRef} className='scroll-title h-dvh w-dvw flex justify-center items-center' style={{width:'100vw',backgroundColor:'#fff',position:'absolute',top:'50%',zIndex:-1,marginTop:'8vw',transform:'translateY(-50%)'}}>
         <div ref={titleRef} className='uppercase leading-none'>
-          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.8333vw', fontWeight: 700, color:'#ffec40',letterSpacing:'-0.625vw'}}>Lovely Runner</span>
+          <span ref={textRef} className='w-max whitespace-nowrap block' style={{fontSize:'20.8333vw', fontWeight: 300, color:'#6abbff',letterSpacing:'-0.625vw'}}>Lovely Runner</span>
         </div>
       </div>    
     </section>
