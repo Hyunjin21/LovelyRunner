@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main10 = () => {
   return (
-    <footer style={{ width:'100%', paddingBottom:'100px', backgroundColor:'#ffec40'}}>
+    <footer style={{ width:'100%', paddingBottom:'100px', backgroundColor:'#fe97b6'}}>
         <div className='footer-wrap' style={{ display:'flex', justifyContent:'center', alignItems:'center'}}>
             <div className='company' style={{ color:'#86bee7', textAlign:'center', fontSize:'1.3rem'}}>
                 <div className='logo' style={{ display:'flex', justifyContent:'center', alignItems:'center', gap:'6px', marginBottom:'18px'}}>

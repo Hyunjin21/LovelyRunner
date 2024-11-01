@@ -31,15 +31,15 @@ const Main02 = () => {
         // markers: true
       }
     })
-    .fromTo(textRef.current, { color:'#86bee7' }, { color:'#ffec40' }, 100)
+    .fromTo(textRef.current, { color:'#fd6b98' }, { color:'#fd6b98' }, 100)
   
   }, []);
   
 
   return (
-    <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#ffec40', width: '100%', height: '100vh', position: 'relative', overflow:'hidden' }}>
+    <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#6abbff', width: '100%', height: '100vh', position: 'relative', overflow:'hidden' }}>
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:0, transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
-        <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '18.750vw', fontWeight: 700, color: '#86bee7' }}>Lovely Runner</span>
+        <span ref={textRef} className='w-max whitespace-nowrap block' style={{ fontSize: '18.750vw', fontWeight: 700, color: '#fd6b98' }}>Lovely Runner</span>
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ const Main07 = () => {
           bottom: '0',
           left: 0,
           fontSize: '10vw', 
-          color: 'rgba(0, 0, 0, 0.2)',
+          color: '#6abbff',
           fontWeight: 600,
           whiteSpace: 'nowrap',
           zIndex: 0, 
