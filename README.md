@@ -20,3 +20,8 @@ useFrame(() => { if (modelRef.current) { modelRef.current.rotation.y = mouseX * 
 가로스크롤 센터
 
 우산은 스크롤에따라 X축 기준 회전
+
+
+
+https://ilyashubin.github.io/scrollbooster/
+https://interactjs.io/
