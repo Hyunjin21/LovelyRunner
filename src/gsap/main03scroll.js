@@ -203,7 +203,7 @@ return (
       <section ref={triggerRef} className='overflow-x-clip h-screen w-full'>
         <div ref={sectionRef} className='h-full w-[500vw] flex flex-row relative bg-white'>
                 {/* Page1 */}
-                <div className='part part1 w-[100vw] relative flex justify-center items-center flex-col m-0 h-[100%]'>
+                <div className='part part1 w-[100vw] relative flex justify-center items-center flex-row-reverse md:flex-col m-0 h-[100%]'>
                      <div className='img_wrap' style={{width:'1000px', height:'1000px', zIndex:'999', position:'absolute'}}>
                       <Canvas style={{width:'100%', height:'100%'}}>
                         <ShowerModel />
@@ -213,14 +213,14 @@ return (
                       </Canvas>
                      </div>
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
-                     <span className='ost_text text-[#0cd886] text-[60vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5px]'>PART1</span>
+                       <span className='ost_text writing-vertical-lr md:writing-normal text-[#0cd886] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART1</span>
                      </div>
-                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto ml-auto mt-[4vw] md:mt-[10vw] w-full'>
+                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                        <div className='ost_title'>
-                         <span className='ost_text text-[#0cd886] text-[7vw] md:text-[4.167vw] md:text-[2.083vw] font-bold tracking-[1.5px]'>Rain Shower</span>
+                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Rain Shower</span>
                        </div>
                        <div className='ost_singer'>
-                         <span className='ost_text text-[7vw] md:text-[18px] md:text-[10px] leading-[1.78] mt-[10px]'>Eclipse</span>
+                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Eclipse</span>
                        </div>
                      </div>
                 </div>
@@ -239,7 +239,7 @@ return (
                   </div>
                   <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                     <div className='ost_title'>
-                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Star</span>
+                      <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Star</span>
                     </div>
                     <div className='ost_singer'>
                       <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>N.Flying</span>
@@ -261,7 +261,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>It's like a dream</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>It's like a dream</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Minnie (G)I-DLE</span>
@@ -283,7 +283,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Spring Snow</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Spring Snow</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>10CM</span>
@@ -305,7 +305,7 @@ return (
                     </div>
                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
                       <div className='ost_title'>
-                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-medium leading-[1.04]'>Present</span>
+                        <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Present</span>
                       </div>
                       <div className='ost_singer'>
                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Ha Sung Woon</span>

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @font-face {
@@ -8,17 +8,28 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
-  font-family: 'Poppins', 'Pretendard', '돋움', Dotum, '굴림', Gulim, Verdana, Arial, sans-serif !important;
+  font-family: 'yg-jalnan', 'Pretendard', '돋움', Dotum, '굴림', Gulim, Verdana, Arial, sans-serif !important;
 }
 
 .hide {
   opacity: 0;
   transition: opacity 0.5s ease-in-out; 
 }
+.video-wrap video {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  box-shadow: 0 0 0px #6abbff;
+}
 .scrolled-title::before {
-  background: linear-gradient(#86bee7 20%, transparent);
+  background: linear-gradient(#1795ff 5%, transparent);
   content: '';
   display: block;
   width: 100%;
