@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef} from 'react';
 import './App.css';
 import Loading from './gsap/loading';
 import Main01 from './gsap/main01';
@@ -16,6 +16,7 @@ import Main10 from './gsap/main10';
 import { RecoilRoot } from 'recoil';
 
 function App() {
+  
   const headerRef = useRef(null);
   const initialWidthRef = useRef(window.innerWidth);
 
@@ -61,10 +62,12 @@ function App() {
     };
   }, []);
 
+  
+
   return (
     <>
     <RecoilRoot>
-      {/* <Loading /> */}
+      <Loading />
       <Main01 />
       <Main02 />
       <div ref={headerRef} className='hide'>

@@ -132,6 +132,7 @@ const Loading = () => {
                     setLoadingFinished(true);
                     document.body.style.overflow = "auto"; 
                     document.body.style.overflowX = "hidden"; 
+                    
                   },
                 });
               }

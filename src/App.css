@@ -23,6 +23,11 @@ html {
   opacity: 0;
   transition: opacity 0.5s ease-in-out; 
 }
+.video-wrap video {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  box-shadow: 0 0 0px #6abbff;
+}
 .scrolled-title::before {
   background: linear-gradient(#1795ff 5%, transparent);
   content: '';

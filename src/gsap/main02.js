@@ -37,7 +37,7 @@ const Main02 = () => {
   
 
   return (
-    <section ref={triggerRef} className='scroll-title' style={{ backgroundColor: '#6abbff', width: '100%', height: '100vh', position: 'relative', overflow:'hidden' }}>
+    <section ref={triggerRef} className='scroll-title' style={{ background: 'linear-gradient(to bottom, #5fb5f7, #6abbff)', width: '100%', height: '100vh', position: 'relative', overflow:'hidden' }}>
       <div ref={titleRef} className='flex justify-center uppercase leading-none' style={{ position: 'relative', top:'24px',  transition: 'top 0.3s ease-in-out', boxSizing: 'border-box' }}>
       <span ref={textRef} className='w-max whitespace-nowrap block' style={{ color: '#fd6b98' }}>
         <svg  xmlns="http://www.w3.org/2000/svg" className='w-[300px] overflow-visible'
