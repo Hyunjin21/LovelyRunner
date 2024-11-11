@@ -16,10 +16,10 @@ module.exports = {
     extend: {
       writingMode: {
         'vertical-lr': 'vertical-lr',
-        'horizontal-tb': 'horizontal-tb', // 기본값을 horizontal-tb로 추가
+        'horizontal-tb': 'horizontal-tb',
       },
       fontFamily: {
-        sacramento: ['"Sacramento"', 'cursive'], // Sacramento 폰트 추가
+        sacramento: ['"Sacramento"', 'cursive'], 
       },
     }
   },
@@ -32,7 +32,7 @@ module.exports = {
         },
         // 기본 가로쓰기
         '.writing-normal': {
-          'writing-mode': 'horizontal-tb', // 기본값인 가로쓰기 모드
+          'writing-mode': 'horizontal-tb', 
         },
       }
       addUtilities(newUtilities)

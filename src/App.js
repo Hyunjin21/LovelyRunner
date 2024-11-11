@@ -67,7 +67,7 @@ function App() {
   return (
     <>
     <RecoilRoot>
-      <Loading />
+      {/* <Loading /> */}
       <Main01 />
       <Main02 />
       <div ref={headerRef} className='hide'>
