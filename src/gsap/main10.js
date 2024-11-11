@@ -9,7 +9,7 @@ const Main10 = () => {
                     <img src='/cj.svg' className='w-[100px] m-[10px]'/>
                     <img src='/bon.svg' className='w-[132px] m-[10px]'/>
                 </div>
-                <p className='text-sm'>ⓒ Lovely Runner Portfolio. All rights reserved.</p>
+                <p className='text-base text-white'>ⓒ Lovely Runner Portfolio. All rights reserved.</p>
             </div>
         </div>
     </footer>

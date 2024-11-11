@@ -65,9 +65,9 @@ const Main08 = () => {
       </div>
       <div style={{position:'relative', top:'300px', width:'100%', height:'100%', paddingLeft:'5.208vw', paddingRight:'5.208vw', maxWidth:'1920px', boxSizing:'border-box'}}>
         <ul ref={listRef} style={{marginTop:'-9.375vw', listStyle:'none'}}>
-          <li ref={text01Ref} className='w-max whitespace-nowrap block' style={{ width:'500px', color: '#ffec40', position:'absolute', top:'70%', left:'5.208vw'}}><img src='TVING_logo.svg'/></li>
-          <li ref={text02Ref} className='w-max whitespace-nowrap block' style={{ width:'500px', color: '#86bee7', position:'absolute', top:'70%', left:'50%', transform:'translateX(-50%)'}}><img src='Serieson_logo.svg'/></li>
-          <li ref={text03Ref} className='w-max whitespace-nowrap block' style={{ width:'500px', color: '#0cd886', position:'absolute', top:'70%', right:'5.208vw'}}><img src='Netflix_logo.svg'/></li>
+          <li ref={text01Ref} className='w-max whitespace-nowrap block' style={{ width:'300px', color: '#ffec40', position:'absolute', top:'70%', left:'5.208vw'}}><img src='TVING_logo.svg'/></li>
+          <li ref={text02Ref} className='w-max whitespace-nowrap block' style={{ width:'360px', color: '#86bee7', position:'absolute', top:'70%', left:'50%', transform:'translateX(-50%)'}}><img src='Serieson_logo.svg'/></li>
+          <li ref={text03Ref} className='w-max whitespace-nowrap block' style={{ width:'280px', color: '#0cd886', position:'absolute', top:'70%', right:'5.208vw'}}><img src='Netflix_logo.svg'/></li>
         </ul>
       </div>
     </section>

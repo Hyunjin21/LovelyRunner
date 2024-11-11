@@ -215,9 +215,9 @@ return (
                      <div className='ost_part flex justify-center items-center m-0 w-[1920px] relative'>
                        <span className='ost_text writing-vertical-lr md:writing-normal text-[#0cd886] text-[50vw] md:text-[34.375vw] font-["Oswald",_sans-serif] font-bold tracking-[1.5]'>PART1</span>
                      </div>
-                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-9.635vw] w-full'>
+                     <div className='ost_info flex justify-center items-center flex-col mr-[-100px] md:mr-auto md:ml-auto mt-[4vw] md:mt-[-5vw] w-full text-[#08995f]'>
                        <div className='ost_title'>
-                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04]'>Rain Shower</span>
+                         <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[4.167vw] font-normal leading-[1.04] '>Rain Shower</span>
                        </div>
                        <div className='ost_singer'>
                          <span className='ost_text writing-vertical-lr md:writing-normal text-[7vw] md:text-[1.1719vw] leading-[1.78] md:mt-[10px]'>Eclipse</span>

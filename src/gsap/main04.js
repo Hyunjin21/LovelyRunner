@@ -63,16 +63,16 @@ const Main04 = () => {
   return (
     <section ref={sectionRef} className='w-dvw overflow-hidden' style={{backgroundColor:'#6abbff', width:'100%', marginTop:'300px', paddingBottom:'500px'}}>
         <div className='descript' style={{color:'#000', paddingTop:'300px', height:'200vh'}}>
-          <div className='text-wrap' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
-            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-normal leading-[1.1]'>
+          <div className='text-wrap text-white' style={{paddingLeft:'7.031vw',paddingRight:'7.031vw'}}>
+            <p className='w-max whitespace-nowrap block text-6xl md:text-[5vw] font-normal leading-[1.2]'>
             What if you<br className='block md:hidden'/> get a chance<br className='block'/>to save your<br className='block md:hidden'/> favorite?<br/>
             <span className='hidden md:block'>
             Nineteen to live again,<br className='block'/> my goal is to protect <br className='block'/>my favorite<br className='block md:hidden'/> Ryu Sun-jae!
             </span>
             </p>
-            <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-normal block pt-[100px] leading-[1.2]'>
+            <span className='w-max whitespace-nowrap text-2xl md:text-[1.8vw] font-normal block pt-[100px] leading-[1.5]'>
             만약, 당신의 최애를<br className='block md:hidden'/> 구할 수 있는 기회가 온다면?<br/>
-            다시 살게 된 열아홉,<br className='block md:hidden'/> 목표는 최애 류선재를 지키는 것!
+            다시 살게 된 열아홉,<br className='block md:hidden'/> 목표는 최애 <span className='text-[#fd6b98] underline'>류선재</span>를 지키는 것!
             </span>
           </div>
           <div ref={triggerRef} className='scroll-title h-dvh flex justify-center items-start overflow-hidden' style={{width:'100%', height:'100vh', position:'absolute',backgroundColor:'#6abbff', paddingTop:'260px',paddingBottom:'260px'}}>
