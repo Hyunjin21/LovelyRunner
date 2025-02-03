@@ -154,7 +154,9 @@ const Main08 = () => {
               left: "5.208vw",
             }}
           >
-            <img src={process.env.PUBLIC_URL + "TVING_logo.svg"} />
+            {/* <img src={process.env.PUBLIC_URL + "TVING_logo.svg"} /> */}
+            <img src={`${process.env.PUBLIC_URL}/TVING_logo.svg`} alt="TVING Logo" />
+
           </li>
           <li
             ref={text02Ref}
@@ -168,7 +170,9 @@ const Main08 = () => {
               transform: "translateX(-50%)",
             }}
           >
-            <img src={process.env.PUBLIC_URL + "Serieson_logo.svg"} />
+            {/* <img src={process.env.PUBLIC_URL + "Serieson_logo.svg"} /> */}
+            <img src={`${process.env.PUBLIC_URL}/Serieson_logo.svg`} alt="Serieson Logo" />
+
           </li>
           <li
             ref={text03Ref}
@@ -181,7 +185,9 @@ const Main08 = () => {
               right: "5.208vw",
             }}
           >
-            <img src={process.env.PUBLIC_URL + "Netflix_logo.svg"} />
+            {/* <img src={process.env.PUBLIC_URL + "Netflix_logo.svg"} /> */}
+            <img src={`${process.env.PUBLIC_URL}/Netflix_logo.svg`} alt="Netflix Logo" />
+
           </li>
         </ul>
       </div>
