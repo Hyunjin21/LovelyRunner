@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LovelyRunner/static/css/main.7378b135.css",
-    "main.js": "/LovelyRunner/static/js/main.06ea98f8.js",
+    "main.css": "/LovelyRunner/static/css/main.493bf43c.css",
+    "main.js": "/LovelyRunner/static/js/main.9485eb48.js",
     "static/js/453.84484f02.chunk.js": "/LovelyRunner/static/js/453.84484f02.chunk.js",
     "index.html": "/LovelyRunner/index.html",
-    "main.7378b135.css.map": "/LovelyRunner/static/css/main.7378b135.css.map",
-    "main.06ea98f8.js.map": "/LovelyRunner/static/js/main.06ea98f8.js.map",
+    "main.493bf43c.css.map": "/LovelyRunner/static/css/main.493bf43c.css.map",
+    "main.9485eb48.js.map": "/LovelyRunner/static/js/main.9485eb48.js.map",
     "453.84484f02.chunk.js.map": "/LovelyRunner/static/js/453.84484f02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7378b135.css",
-    "static/js/main.06ea98f8.js"
+    "static/css/main.493bf43c.css",
+    "static/js/main.9485eb48.js"
   ]
 }
