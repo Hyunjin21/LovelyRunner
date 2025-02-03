@@ -2,6 +2,7 @@
   "name": "lovelyrunner",
   "version": "0.1.0",
   "private": true,
+  "homepage": "",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.114.0",
@@ -27,6 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://hyunjin21.github.io/LovelyRunner/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,6 +53,6 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14"
-  },
-  "homepage": "https://hyunjin21.github.io/LovelyRunner/"
+  }
+
 }

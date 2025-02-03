@@ -22,7 +22,7 @@ const Main02fixed = () => {
         // markers: true,
         smooth: 1
     },
-    width: '200px',
+    width: '120px',
     ease: 'ease-in',
     });
     // triggerRef의 높이 조정 및 배경색 변경

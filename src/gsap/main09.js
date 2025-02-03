@@ -60,7 +60,7 @@ const Main09 = () => {
         <h3 className='text-5xl md:text-[4rem] font-normal text-[#1795ff] mb-[2rem] md:mb-[6rem]'>INFORMATION</h3>
         <div style={{ display:'flex', flexFlow:'column', alignItems:'center'}}>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
-            <dt className='float-left text-[#fff] font-normal w-[12rem] md:w-[20rem] text-right mr-[1rem]'>CHIEF PRODUCER</dt>
+            <dt className='float-left text-[#ffeb35] font-normal w-[12rem] md:w-[20rem] text-right mr-[1rem]'>CHIEF PRODUCER</dt>
             <dd className='float-left text-[#1795ff] font-normal w-[12rem] md:w-[20rem] text-left leading-[1.8]'>KIM HO JUN</dd>
           </dl>
           <dl style={{ overflow:'hidden', lineHeight:'1.8'}}>
